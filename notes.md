@@ -1,4 +1,168 @@
 # Notes
 
-These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on my a Django course.
+[Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
+Where I stopped: 12:24
+
+These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
+
+Inside each folder there will be studying files, which are files that I wrote following the teacher, and practice files, which are files that I wrote after I studied, trying to apply what I've learned. Most of the time, in practice files, I just try to repeat what I learned, but without looking at the original code.
+
+#### What is HTML?
+* HTML is an acronym for: Hypertext Markup Language.
+* It is a declarative language, not computational (Python, PHP, Javascript)
+* It is used to declare what should exist on a web page
+* Your web browser will take an .html file, read it, and display it as a web page
+
+#### HTML advantages
+* Easy to learn!
+* Easy to use!
+* Easy to write!
+* Web developer jobs are high in demand (You'll want to learn CSS and Javascript)
+
+#### HTML disadvantages
+* HTML by itself is ugly, no style (CSS)
+* Static nature, no animations (Javascript)
+* Unpredictable behavior across web browsers
+* Little to no jobs if you ONLY know HTML
+
+#### Where to start?
+For beginner front end developers, you should start with HTML, then go to CSS and after that go to JavaScript. Each of these languages has a specialty and they work well together.
+
+Think of building a website as being similar to constructing a house. HTML acts as the foundation, as the skeletal framework of our house, including walls, doors, roofing and etc. But we would want to eventually decorate our house when we are done building it. That's when CSS comes in. CSS would be us painting, decorating and furnishing our house. Lastly, JavaScript adds dynamic life to our webpages. In our house analogy, this would be similar to us adding electricity, gas, lighting and plumbing. It adds functionality to our website.
+
+#### What you will need:
+1. Web browser
+ * Google Chrome
+ * Firefox
+ * Safari
+ * Microsoft Edge
+ * DO NOT USE INTERNET EXPLORER
+
+2. Text Editor
+ * Sublime Text
+ * Atom
+ * Visual Studio
+ * Notepad++
+
+#### Writing your first file
+Create a file called `index.html` and write whatever you want inside of it. Save it wherever you want and open it with one of the web browsers listed above. You'll see your text displayed in your browser.
+
+One thing you may want to do is to have your text editor and your web browser side by side, so you can easily make any changes to your HTML file and see them by refreshing the web page.
+
+
+#### Tags
+In HTML we use a series of tags that describe how we want our website to look and what content we want on it. Different tags have different effects on our website.
+
+What we are going to be doing here is creating a skeletal structure of our website. Think of it as all of the support beams of our house in our previous example.
+
+Type this at the first line of your `index.html` file:
+
+`<!DOCTYPE html>`
+
+This defines the document as being of the current version, which is currently HTML5. It tells the web browser that this is an HTML document.
+
+---
+
+Now, you are going to write the HTML tags. Generally (not always), every tag has its pair. One is used for opening and the other for closing. This lets the browser know where the effects of the tag begin and where they end. The one used for closing has a forward slash before its name. Type this on the following lines of your file:
+
+```
+<!DOCTYPE html>
+
+<html>
+
+</html>
+```
+
+These html tags are going to act as a container that will hold all of our tags and text for our web page. This means that we always want to have some room between these two html tags.
+
+---
+
+The next set of tags we'll need is the head tags. You'll write them inside the html tags. Make sure to indent your tags if they're inside another set of tags. Indenting doesn't make any difference in how the browser will read your file, but it helps you read the code with more ease.
+
+```
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    </head>
+
+</html>
+```
+
+This head element contains meta information about this document. It describes information about this document to the web browser. Think of it like the settings of this document.
+
+---
+
+If we have a head element, we will also want to have a body element, so we're going to put that withing the HTML tags, but after the head tags.
+
+```
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    </head>
+
+    <body>
+    </body>
+
+</html>
+```
+
+All of our content will go into the body tags. So, anything you want to add to your web page, you'll want to put within the body tag so it can be displayed.
+
+---
+
+Inside the head we can have title tags that will give our website the title we want it to have.
+
+```
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>THE BEST WEBSITE</title>
+    </head>
+
+    <body>
+    </body>
+
+</html>
+```
+
+---
+
+This is the skeletal structure of our website. They are the minimum requirements to build a solid foundation for our website. If you want to add text into your web page, you can type it inside the body tags. These are all of the tags we learned so far:
+
+```
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>THE BEST WEBSITE</title>
+    </head>
+
+    <body>
+        Look! I'm coding! I'm a super duper coder! * emoji using sunglases *
+    </body>
+
+</html>
+```
+
+#### Comments
+Comments are useful if you need to insert some sort of note for yourself or for somebody else that's looking over your HTML document. When you insert a comment, it won't actually appear in your web page, but it will appear in your HTML document.
+
+`<!-- This is how you make a comment -->`
+
+```
+<!-- 
+This comment 
+can go over 
+multiple lines too!
+-->
+```
+
+#### Headings
 
