@@ -49,6 +49,7 @@ Create a file called `index.html` and write whatever you want inside of it. Save
 
 One thing you may want to do is to have your text editor and your web browser side by side, so you can easily make any changes to your HTML file and see them by refreshing the web page.
 
+This `index.html` file can be named whatever you want, but it is good that your main file be named `index.html` because that's what your browser will firstly search for in the folder of your web page. So keep in mind that you can have files with other names inside the folder of your web page.
 
 #### Tags
 In HTML we use a series of tags that describe how we want our website to look and what content we want on it. Different tags have different effects on our website.
@@ -165,4 +166,10 @@ multiple lines too!
 ```
 
 #### Headings
+Heading tags are used to show the structure of a document by transforming text to become headings such as titles, category markers or sections. By default there are six sizes of headings that you can apply to text. They're h1 through h6, where h1 is the largest heading, and h6 is the smallest.
 
+Code example:
+
+`<h1>This is the main heading</h1>`
+
+Whatever text is enclosed within these tags, will be displayed by the respective tag.
