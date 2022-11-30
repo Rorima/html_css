@@ -1,7 +1,8 @@
 # Notes
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
-Where I stopped: 12:24
+
+Where I stopped: 29:20
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -251,3 +252,24 @@ You can also use the non-breaking-space to indent paragraphs. Just add four `&nb
     consectetur.
 </p>
 ```
+
+#### How should you name your HTML files?
+* Try not to use special characters. For best results, use only letters, numbers, underscores, periods and hyphens;
+* Don't use spaces. They can be read by your computer, but web pages can't handle them;
+* Start your file name with a letter. Some programming languages give numbers a special notice, and might not treat a file starting with a number as you intended;
+* Use all lowercase letters. Your computer might see uppercase and lowercase file names as the same, but web servers are case sensitive;
+* Keep your file names short. Less than four words and between 30 to 50 characters are ideal. It is good to indicate their content or purpose with a meaningful title;
+* Remember to add the HTML file extention;
+
+#### Text formatting
+Remember to open and close these tags. Add the text you want to be affected between them.
+
+|Code|Effect|
+|:---:|:---:|
+|`<b></b>`|Bold text|
+|`<i></i>`|Italic text|
+|`<sub></sub>`|Subscript text|
+|`<sup></sup>`|Superscript text|
+|`<small></small>`|Small text|
+|`<big></big>`|Big text|
+
