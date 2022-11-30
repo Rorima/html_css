@@ -172,4 +172,82 @@ Code example:
 
 `<h1>This is the main heading</h1>`
 
+Complete code example:
+
+```
+<!DOCTYPE html>
+
+<head>
+    <title>My Website</title>
+</head>
+
+<body>
+
+    <h1>Largest Heading</h1>
+    <h2>Slightly smaller heading</h2>
+    text
+
+</body>
+
+</html>
+```
+
 Whatever text is enclosed within these tags, will be displayed by the respective tag.
+
+#### Paragraphs
+Sometimes you'll want some text displayed in your website just to test how it will be displayed to the user. Using VS Code, you can type the word lorem and press ENTER. This will give you a full paragraph written in Latin. It is used a lot in web programming.
+
+If you want to separate some text and have it become its separate paragraph, just use the paragraph tag. This will split up the text and turn it into a paragraph.
+
+Code example:
+
+```
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit culpa provident architecto maxime nisi hic itaque natus obcaecati. Ex cumque labore sequi laudantium atque totam assumenda! Blanditiis neque impedit sit.
+</p>
+```
+
+#### Spacings
+After some time you're going to notice that the empty lines in your document do not appear in your webpage. So if you want to add blank lines to your web page, use the `<br>` tag. You don't need a closing to this tag. It's one of the few exceptions where you don't need to add an ending to it.
+
+---
+
+The tag `<hr>` is used to separate the page with a straight line, also known as horizontal ruler. It is useful if you want to mark something off, like section by section for example. This is also an empty tag, so you don't need a closing for this one.
+
+```
+<h1>Heading 1</h1>
+<hr>
+<h2>Heading 2</h2>
+<hr>
+<h3>Heading 3</h3>
+<hr>
+<h4>Heading 4</h4>
+<hr>
+<h5>Heading 5</h5>
+<hr>
+<h6>Heading 6</h6>
+```
+
+---
+
+You might have noticed that your whitespaces are not shown. No matter how many whitespaces you add between two words, it will not show. So if you want to add a few spaces, you need to use the non-breaking-space, or shortened `&nbsp;`.
+
+```
+<p>
+    Lorem, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ipsum dolor sit amet consectetur adipisicing elit. Fugit culpa provident
+    architecto maxime nisi hic
+    itaque natus obcaecati. Ex cumque labore sequi laudantium atque totam assumenda! Blanditiis neque impedit sit.
+</p>
+```
+
+You can also use the non-breaking-space to indent paragraphs. Just add four `&nbsp;` above the text and the first line of your paragraph will be indented.
+
+```
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nam voluptas corporis
+    ex optio vel maiores
+    similique beatae doloremque. Consequatur sequi, voluptatem expedita ut fugit facere est aliquam illo
+    consectetur.
+</p>
+```
