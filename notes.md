@@ -2,7 +2,9 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 32:00
+Where I stopped: 44:20
+
+PRACTICE WHAT YOU'VE LEARNED SO FAR
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -277,4 +279,70 @@ Remember to open and close these tags. Add the text you want to be affected betw
 |`<mark></mark>`|Marked text (highlited)|
 
 #### Links and images
+Before we begin this lesson, you'll want to be sure to download a couple of images. Four is a good number. Place these images in the same folder your HTML file is in. 
 
+To include links and images in our web pages, we first need to understand what are attributes. All elements in HTML have attributes. Attributes provide additional information about an element that contains an attribute. They're used in the opening tags of an element and come in name-value pairs.
+
+They're useful because we can provide links to web pages, we can include images, and even specify the styling of an element, but we'll learn that in the future.
+
+##### HTML links
+A link is defined with the `<a>` tag, and you need a closing tag for that too. Now you're gonna need some text that will function as the link. For example, let's say that we want to create a link that will take us to Google's homepage.
+
+Code example:
+
+`<a>Go to Google's homepage.</a>`
+
+If you click on the link, nothing will happen. You have to give an attribute to the `<a>` tag. This tag makes any text that is sorrounded by it become a hyperlink that can link this text to another web page that you specify. In order to specify the web page, you're going to use the `href` attribute. This is an acronym for Hypertext Reference. We set this equal to whatever website we want to link this hyperlink to. Make sure to put the website inside double quotes.
+
+`<a href="http://www.google.com">Go to Google's homepage.</a>`
+
+Open hyperlink in a new tab:
+
+`<a href="http://www.google.com" , target="_blank">Go to Google's homepage.</a>`
+
+##### Download link
+It works almot the same as the previous code. We just need to add the path to our file into the href's double quotes, or only the name of the file if the file is in the same folder as the HTML file. After writing the name of the file, write `download` as the second argument and set it equal to the name you want your image to have when it's downloaded.
+
+Code example:
+
+`<a href="angel.png" , download="Angel">Download a machine generated image.</a>`
+
+##### Add a picture to your web page
+You can use the `<img>` tag to add pictures to your web page. This tag is self closing, so you don't need to add another tag to close it. Inside this tag you're going to write `src` which is short for source, and inside the quotes you add the path to your image. It can be a path in your machine, or a web address, or just the name of the file, if it's in the same folder as your HTML file.
+
+Code example:
+
+`<img src="church.png>"`
+
+---
+
+In order to add images from other folders in your computer, you'll have to get the absolute path to that image. You can see the absolute path of that image in its properties (right clicking it and then clicking in "properties"). Put that path into the `src` and the image will be displayed.
+
+Code example:
+
+`<img src="C:\Users\Micro\Desktop\Tudo\desenhos\coragem.png" , height="26%" , width="26%" alt="Courage picture">`
+
+---
+
+Theres a height and width attribute that we can include within the tag to resize the image.
+
+`<img src="church.png" , height="250" , width="250">`
+
+---
+
+You might notice that depending on the resolution of your image, you can get a stretched image, and that's rarely what you want to display to your user. To avoid that, you can pass percentages instead of pixels to `height` and `width`:
+
+`<img src="church.png" , height="20%" , width="20%">`
+
+One advantage of using the percentage system is that the image will be resized according to the zoom of the page.
+
+---
+
+And if for some reason the image is not displayed, you can add an alternate text to be displayed instead with the `alt=""` argument:
+
+`<img src="church.png" , height="20%" , width="20%" , alt="Image of a golden church">`
+
+##### Image hyperlink
+You can have an image also function as a hyperlink when you click on it. First choose your image and display it on the screen, then surround it with the `<a>` tag:
+
+`<a href="http://www.google.com" , target="_blank"><img src="japan.png" , height="50%" , width="50%" , alt="Picture of japan atificially generated"></a>`
