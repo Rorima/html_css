@@ -354,7 +354,7 @@ In this lesson, you're going to learn four types of lists in HTML. They are:
 * Nested Lists
 
 ##### Unordered list
-This is useful if you want to create a list and the order doesn't really matter. A grocery shopping list is a good examle. The unordered list uses the tags `<ul></ul>`. In order to list your items inside this list, you'll have to use the list item tag `<li></li>` for each item.
+This is useful if you want to create a list and the order doesn't really matter. A grocery shopping list is a good example. The unordered list uses the tags `<ul></ul>`. In order to list your items inside this list, you'll have to use the list item tag `<li></li>` for each item.
 
 Code example:
 
@@ -370,7 +370,7 @@ Code example:
 
 ---
 
-If you want to change the bullet points of the list, you have a few options if you use CSS. On the starting `<ul>` tag, wryte the following argument:
+If you want to change the bullet points of the list, you have a few options if you use CSS. On the starting `<ul>` tag, write the following argument:
 
 `<ul style="list-style-type:">`
 
