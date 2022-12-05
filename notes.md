@@ -2,9 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 44:20
-
-PRACTICE WHAT YOU'VE LEARNED SO FAR
+Where I stopped: 1:00:40
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -35,17 +33,17 @@ Think of building a website as being similar to constructing a house. HTML acts 
 
 #### What you will need:
 1. Web browser
- * Google Chrome
- * Firefox
- * Safari
- * Microsoft Edge
- * DO NOT USE INTERNET EXPLORER
+  * Google Chrome
+  * Firefox
+  * Safari
+  * Microsoft Edge
+  * DO NOT USE INTERNET EXPLORER
 
 2. Text Editor
- * Sublime Text
- * Atom
- * Visual Studio
- * Notepad++
+  * Sublime Text
+  * Atom
+  * Visual Studio
+  * Notepad++
 
 #### Writing your first file
 Create a file called `index.html` and write whatever you want inside of it. Save it wherever you want and open it with one of the web browsers listed above. You'll see your text displayed in your browser.
@@ -346,3 +344,130 @@ And if for some reason the image is not displayed, you can add an alternate text
 You can have an image also function as a hyperlink when you click on it. First choose your image and display it on the screen, then surround it with the `<a>` tag:
 
 `<a href="http://www.google.com" , target="_blank"><img src="japan.png" , height="50%" , width="50%" , alt="Picture of japan atificially generated"></a>`
+
+#### Lists
+In this lesson, you're going to learn four types of lists in HTML. They are:
+
+* Unordered List `<ul></ul>`
+* Ordered List `<ol></ol>`
+* Description List `<dl></dl>`
+* Nested Lists
+
+##### Unordered list
+This is useful if you want to create a list and the order doesn't really matter. A grocery shopping list is a good examle. The unordered list uses the tags `<ul></ul>`. In order to list your items inside this list, you'll have to use the list item tag `<li></li>` for each item.
+
+Code example:
+
+```
+<h3>Grocery List</h3>
+<ul>
+    <li>Bread Dough</li>
+    <li>Tomato Sauce</li>
+    <li>Chesse</li>
+    <li>Peppers</li>
+</ul>
+```
+
+---
+
+If you want to change the bullet points of the list, you have a few options if you use CSS. On the starting `<ul>` tag, wryte the following argument:
+
+`<ul style="list-style-type:">`
+
+And then choose one of these types:
+* circle
+* square
+* none
+* disc (default bullet point)
+
+##### Ordered lists
+You can use the `<ol></ol>` tags to create ordered lists. The process is very similar to the previous list. The items will be ordered as you add them to your list.
+
+Code example:
+
+```
+<h3>My To-Do-List:</h3>
+<ol>
+    <li>Study Programming</li>
+    <li>Study Music</li>
+    <li>Read the Bible</li>
+</ol>
+```
+
+---
+
+And you can also change the style of your ordered list:
+
+`<ol type="">`
+
+You can choose the following styles:
+
+* A (Display items with uppercase alphabet letters)
+* a (Display items with lowercase alphabet letters)
+* I (Display items with uppercase Roman numerals)
+* i (Display items with lowercase Roman numerals)
+* 1 (Display items with numbers)
+
+---
+
+You can choose on which number your list will start:
+
+```
+<h3>Starting from 100:</h3>
+<ol start="100">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+```
+
+You can apply that to Roman numerals or other styles.
+
+##### Description lists
+The description list is also referred to definition list. It is a list of terms or items with a descriptions for each specific item. You have to use the `<dl></dl>` tags to make a description list. Now, instead of writing `<li>` for "list item", you'll have to type `<dt></dt>` for "description term", or "definition term".
+
+Code example:
+
+```
+<h3>Web Development Languages</h3>
+<dl>
+    <dt>HTML</dt>
+    <dt>CSS</dt>
+    <dt>JavaScript</dt>
+</dl>
+```
+
+In order to add descriptions details you'll have to use another tag called `<dd></dd>` right after the item.
+
+```
+<h3>Web Development Languages</h3>
+<dl>
+    <dt>HTML</dt>
+    <dd>Adds structure to a web page</dd>
+
+    <dt>CSS</dt>
+    <dd>Adds style to a web page</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Adds functionality to a web page</dd>
+</dl>
+```
+
+##### Nested list
+You can create a whole new list inside the "list item" tags, and then you can add your subitems. You can use any type of list you want to make nested lists.
+
+```
+<h3>Grocery List 2.0:</h3>
+<ul>
+    <li>Bread Dough</li>
+    <li>Tomato Sauce</li>
+    <li>Cheese</li>
+    <li>Toppings
+        <ul>
+            <li>Peppers</li>
+            <li>Pepperoni</li>
+            <li>Mushrooms</li>
+        </ul>
+    </li>
+</ul>
+```
