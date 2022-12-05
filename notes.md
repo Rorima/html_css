@@ -301,7 +301,7 @@ Open hyperlink in a new tab:
 `<a href="http://www.google.com" , target="_blank">Go to Google's homepage.</a>`
 
 ##### Download link
-It works almot the same as the previous code. We just need to add the path to our file into the href's double quotes, or only the name of the file if the file is in the same folder as the HTML file. After writing the name of the file, write `download` as the second argument and set it equal to the name you want your image to have when it's downloaded.
+It works almot the same as the previous code. We just need to add the path to our file into the href's double quotes, or only the name of the file if the file is in the same folder as the HTML file. After writing the name of the file, write `download` as the second argument and set it equal to the name you want your image to have when it's been downloaded.
 
 Code example:
 
@@ -320,7 +320,7 @@ In order to add images from other folders in your computer, you'll have to get t
 
 Code example:
 
-`<img src="C:\Users\Micro\Desktop\Tudo\desenhos\coragem.png" , height="26%" , width="26%" alt="Courage picture">`
+`<img src="C:\Users\Micro\Desktop\Tudo\desenhos\coragem.png">`
 
 ---
 
