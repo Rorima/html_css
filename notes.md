@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 1:00:40
+Where I stopped: 1:15:10
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -471,3 +471,120 @@ You can create a whole new list inside the "list item" tags, and then you can ad
     </li>
 </ul>
 ```
+
+#### Tables
+Tables are used to display information. It's useful if you want to organize information in rows and columns. In order to create tables, you'll need a pair of table tags: `<table></table>`.
+
+In order to create rows, you'll use the table row tag: `<tr></tr>`. Anything inside these tags will be in the first table row.
+
+If you want this first row to be the heading, inside it write the pair of tags `<th></th>`. If you want just to display data, use the table data tag pair: `<td></td>`.
+
+Code example:
+
+```
+<h2>Personal Finances</h2>
+<table>
+    <tr>
+        <th>Month:</th>
+        <th>January</th>
+        <th>February</th>
+        <th>March</th>
+        <th>April</th>
+    </tr>
+</table>
+```
+
+All of these table headings are in the same row.
+
+If you want to create another row, make sure to add another `<tr>` outside the one you created.
+
+Code example:
+
+```
+<h2>Personal Finances</h2>
+<table>
+    <tr>
+        <th>Month:</th>
+        <th>January</th>
+        <th>February</th>
+        <th>March</th>
+        <th>April</th>
+    </tr>
+
+    <tr>
+        <th>Income:</th>
+        <td>$123</td>
+        <td>$123</td>
+        <td>$123</td>
+        <td>$123</td>
+    </tr>
+</table>
+```
+
+One thing to notice with tables is that table headings are bold and centered, while table data is not bold, and it's aligned to the left.
+
+##### Adding borders to tables
+You might notice that the table is getting harder and harder to read. One thing you can do is add borders around each individual cell. That will greatly help in the reading. Inside the opening table tag you can use the border attribute. You can set it equal to any number you want for the thickness (in pixels) of your border.
+
+Code example:
+
+`<table border="2px">`
+
+---
+
+##### Adding colors to tables
+At the opening tag of the table row and write `bgcolor=""` and set it equal to whatever color you want.
+
+Code example:
+
+```
+<tr bgcolor="gray"">
+    <th>Month:</th>
+    <th>January</th>
+    <th>February</th>
+    <th>March</th>
+    <th>April</th>
+</tr>
+```
+
+---
+
+You can also change the background color of your whole table. Write the same attribute in the table tag instead of the table row tag.
+
+Code example:
+
+`<table , bgcolor="black" , border="2px">`
+
+---
+
+You can use hex colors too:
+
+`<tr bgcolor="#8be76a">`
+
+##### Changing cell size
+You can set width and height to each individual cell in your table with the `height=""` and `width=""` attributes.
+
+Code example: 
+
+`<th height=" 10" , width="75">Month:</th>`
+
+You'll notice that the dimensions of the cells of the same column will also change to be equal to the dimensions of the first cell in the column.
+
+---
+
+You can apply the `height=""` and `width=""` attributes to the table as a whole:
+
+`<table height="300" , width="500" , bgcolor="black" , border="2px">`
+
+---
+
+You are not limited to pixels. You can also set the width and height to a percentage. The percentage applies to the room available on the page.
+
+`<table height="30%" , width="50%" , bgcolor="black" , border="2px">`
+
+##### Aligning text
+You can align text in the space that's available to it. Use the tag `<align="">`. The values you can set it qual to is "left", "center", "right" and "justify". This will align the whole row if you place it in the `<tr>` tag.
+
+`<th align=" center" , height=" 10" , width="75">Month:</th>`
+
+#### Audio
