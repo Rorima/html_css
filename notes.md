@@ -483,9 +483,9 @@ Code example:
 
 ```
 <h2>Personal Finances</h2>
-<table>
-    <tr>
-        <th>Month:</th>
+<table>  <!--Creating the tab.-->
+    <tr>  <!--Creating the first table row.-->
+        <th>Month:</th>  <!--Creating the first heading.-->
         <th>January</th>
         <th>February</th>
         <th>March</th>
@@ -513,7 +513,7 @@ Code example:
 
     <tr>
         <th>Income:</th>
-        <td>$123</td>
+        <td>$123</td>  <!--Table data that will be displayed.-->
         <td>$123</td>
         <td>$123</td>
         <td>$123</td>
@@ -533,12 +533,12 @@ Code example:
 ---
 
 ##### Adding colors to tables
-At the opening tag of the table row and write `bgcolor=""` and set it equal to whatever color you want.
+At the opening tag of the table row write `bgcolor=""` and set it equal to whatever color you want.
 
 Code example:
 
 ```
-<tr bgcolor="gray"">
+<tr bgcolor="gray"">  <!--This whole row will be gray.-->
     <th>Month:</th>
     <th>January</th>
     <th>February</th>
@@ -557,7 +557,7 @@ Code example:
 
 ---
 
-You can use hex colors too:
+You can use hex colors instead of names if you want more precise colors:
 
 `<tr bgcolor="#8be76a">`
 
@@ -566,7 +566,7 @@ You can set width and height to each individual cell in your table with the `hei
 
 Code example: 
 
-`<th height=" 10" , width="75">Month:</th>`
+`<th height="10" , width="75">Month:</th>`
 
 You'll notice that the dimensions of the cells of the same column will also change to be equal to the dimensions of the first cell in the column.
 
@@ -585,6 +585,6 @@ You are not limited to pixels. You can also set the width and height to a percen
 ##### Aligning text
 You can align text in the space that's available to it. Use the tag `<align="">`. The values you can set it qual to is "left", "center", "right" and "justify". This will align the whole row if you place it in the `<tr>` tag.
 
-`<th align=" center" , height=" 10" , width="75">Month:</th>`
+`<th align="center" , height="10" , width="75">Month:</th>`
 
 #### Audio
