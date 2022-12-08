@@ -588,3 +588,61 @@ You can align text in the space that's available to it. Use the tag `<align="">`
 `<th align="center" , height="10" , width="75">Month:</th>`
 
 #### Audio
+HTML5 only supports .mp3, .wav and .ogg. .wav and .ogg files don't work on all web browsers, but mp3 does. You'll need the audio tags in the body of your file if you want to add audio to your web page. Inside the opening tag, write `controls`, and it will display the audio controls in your web page.
+
+Code example:
+
+```
+<audio controls>
+
+</audio>
+```
+
+You'll need to list an audio file as a source. You can do that in two ways:
+
+Using the `src=""` attribute:
+
+```
+<audio controls , src="mixkit-retro-game-notification-212.wav">
+
+</audio>
+```
+
+Or using the source tag with the `src=""` attribute:
+
+```
+<audio controls>
+    <source src="mixkit-retro-game-notification-212.wav">
+</audio>
+```
+
+##### Message in case audio doesn't work
+Not all web browsers support audio, so it's good to write a message between your audio tags in case the browser doesn't support it.
+
+```
+<audio controls>
+    <source src="mixkit-retro-game-notification-212.wav">
+    Your web browser do not support audio.
+</audio>
+```
+
+##### Options:
+There are a couple of options you can use:
+
+`loop` (if you want to loop the audio)
+`muted` (if you want the audio to be muted by default)
+`autoplay` (play as soon as the web page is loaded. Not recommended. Might not work on all browsers and mobile devices)
+
+You have to place them inside the opening audio tag.
+
+Code example:
+
+```
+<audio controls loop muted>
+    <source src="mixkit-retro-game-notification-212.wav">
+    Your web browser do not support audio.
+</audio>
+```
+
+Remember not to add commas between the attributes. It doesn't seem to work on Chrome.
+
