@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 1:15:10
+Where I stopped: 1:33:10
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -646,3 +646,19 @@ Code example:
 
 Remember not to add commas between the attributes. It doesn't seem to work on Chrome.
 
+#### Video
+Before we begin you'll going to want to download a video. HTML5 only supports .mp4, .webM and .ogg files. Place the video within the same folder that contains your HTML file.
+
+This process works the same as adding audio into your web page. So below you're only going to see the complete code on how to add videos to your web page.
+
+```
+<video controls src="SampleVideo_1280x720_1mb.mp4">Sample Video</video>
+```
+
+##### Width and height of the video
+Using the `width=""` and `height=""` attributes, you can increase and decrease the amount of space your video is going to take on the screen. If you want a dynamic way to deal with space, use just width (for videos taken horizontally) and use percentages.
+
+`<video controls width="100%" src="SampleVideo_1280x720_1mb.mp4">Sample Video</video>`
+
+##### Attributes:
+The same attributes available to audio are available to video as well. They are: `mute`, `autoplay`, `loop`, `controls`. You can remove the controls if you want the video just to be playing in the background without the user having the ability to pause it. I don't know why you would do this, though.
