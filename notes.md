@@ -660,5 +660,74 @@ Using the `width=""` and `height=""` attributes, you can increase and decrease t
 
 `<video controls width="100%" src="SampleVideo_1280x720_1mb.mp4">Sample Video</video>`
 
-##### Attributes:
+##### Video attributes:
 The same attributes available to audio are available to video as well. They are: `mute`, `autoplay`, `loop`, `controls`. You can remove the controls if you want the video just to be playing in the background without the user having the ability to pause it. I don't know why you would do this, though.
+
+#### Buttons
+Use the `<button></button>` tags to create the buttons. Add any text between these tags and it will appear in the button. Note that the button tags should be inside the body. You can add a name and a type inside the opening tag. This will help when you add functionality to this button in the future.
+
+```
+<button name="simple_button" type="button">
+    Click Me!
+</button>
+```
+
+We need a programming language like PHP or JavaScript to add functionality to this button.
+
+##### Types of buttons
+There are three types of buttons: the plain vanilla button, the submit button and the reset button. You can also add a value, that will be useful to the programming languages.
+
+Code example:
+
+```
+<button name="simple_button" type="button">
+    Simple button!
+</button>
+
+<button name="submit_button" type="submit" value="Submit">
+    Submit!
+</button>
+
+<button name="reset_button" type="reset" value="Reset">
+    Reset!
+</button>
+```
+
+##### Other attributes for buttons
+There are a couple of attributes you can add to your buttons. They are: `disabled`, `autofocus` and `onclick="alert('your message')"`. You can also create a link button. See the code below.
+
+```
+<!--Displaying a disabled button-->
+<button disabled>
+    Disabled
+</button>
+
+<!--When the page is loaded, this button will be highlighted-->
+<button autofocus>
+    Autofocus
+</button>
+
+<!--A pop-up will show up on the screen with the message you typed-->
+<button onclick="alert('type your message here')">
+    Onclick
+</button>
+
+<!--Link button-->
+<a href="https://www.youtube.com">
+    <button>
+        Go to YouTube button
+    </button>
+</a>
+```
+
+##### Styled button with CSS
+
+```
+<!--Styled button with CSS-->
+<button style="background-color:#97f7cc; color:white; font-size:30px; font-family:monospace;">
+    CSS Style
+</button>
+```
+
+Remember that all of those attributes are inside the `style=""` double quotes. Each should end with a semicolon.
+
