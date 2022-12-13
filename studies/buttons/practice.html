@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Practice everything you learned about buttons-->
+
+<!--TODO: 
+Like should be green; DONE
+Dislike should be red; DONE
+Subscribe should be blue; DONE
+Try to find a color for the other buttons; DONE
+Increase the font-size; DONE
+Possibly change the font-type; NO
+Display a pop-up message saying it's not possible to submit videos yet when the user clicks the "submit your video" button; DONE-->
+
+<html>
+
+<head>
+    <title>Practice</title>
+</head>
+
+<body>
+    <h1 align="center">Simple Tube</h1>
+    <video controls src="SampleVideo_1280x720_1mb.mp4" width="100%"></video>
+    <br><br>
+
+    <button name="previous_video" disabled style="background-color:#666397; 
+    color:white; 
+    font-size:20px;">
+        Previous Video
+    </button>
+
+    <button name="next_video" style="background-color:#4841d5; 
+    color:white; 
+    font-size:20px;">
+        Next Video
+    </button>
+
+    <br><br>
+
+    <button name="like_button" style="background-color:#32b732; 
+    color:#ffffff; 
+    font-size:20px;">
+        Like
+    </button>
+
+    <button name="dislike_button" style="background-color:#c63a3a; 
+    color:white; 
+    font-size:20px;">
+        Dislike
+    </button>
+
+    <button name="subscribe_button" style="background-color:#4841d5; 
+    color:white; 
+    font-size:20px;">
+        Subscribe
+    </button>
+
+    <button name="submit_button" onclick="alert('It\'s not possible to submit videos yet.')" style="background-color:#4841d5; 
+    color:white; 
+    font-size:20px;">
+        Submit Your Video
+    </button>
+</body>
+
+</html>
