@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 1:44:20
+Where I stopped: 1:48:30
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -731,3 +731,90 @@ There are a couple of attributes you can add to your buttons. They are: `disable
 
 Remember that all of those attributes are inside the `style=""` double quotes. Each should end with a semicolon.
 
+#### Forms
+The form element is used to collect user input from a visitor to your site. It can be user information, payment info, surveys and etc. There are several form input elements, such as: text fields,  radio buttons, drop down lists, checkboxes and more. Use the `<form></form>` tags.
+
+Usually in a HTML form there's an `action=""` attribute that you may find in the opening form tag, and it defines the action to be performed when the form is submitted. The data from the form may be sent to a page on the server. When the user clicks on the submit button, there might be a script within the action attribute that the form sends data to. We will talk about it in the future, when we talk about programming languages that go with HTML and CSS.
+
+##### Creating a text box
+Using the `<input>` tag, which is a self closing tag, you can create input for the user. You'll have to use the `type="text"` inside it to display a text box to the user.
+
+Code example:
+
+```
+<form>
+    <input type="text">
+</form>
+```
+
+And you can also add a text before the text box to display to the user why the text box is there for:
+
+```
+<form>
+    First Name:
+    <input type="text">
+</form>
+```
+
+Notice that because there isn't a `<br>` between `First Name:` and the input tag, both will be displayed in the same line.
+
+##### Labeling the text before the text box
+You can link a text and a text box together to act as one. Doing this, when you click on the text before the text box, the text box itself will be highlighted, and you'll be able to type in it. You'll need to surround your text with the `<label></label>` tags.
+
+```
+<form>
+    <label>First Name:</label>
+    <input type="text">
+</form>
+```
+
+You'll have to use an attribute to give an ID to this label. This ID will be what will link your text to your text box. You can choose any name you want, just make sure it starts with a letter, and use underscores instead of spaces. The name of the attribute is `for=""`.
+
+```
+<form>
+    <label for="first_name">First Name:</label>
+    <input type="text">
+</form>
+```
+
+Now, we have to use the `<id="">` attribute inside the input tag, and the name of the id will be the same as the value set for the `for=""` attribute above.
+
+```
+<form>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name">
+</form>
+```
+
+Now, if you click on the label, it's going to place your cursor inside the text box. This id attribute is the cliend-side identifier. It is mostly used for CSS and JavaScript to uniquely identify this specific element.
+
+##### The name attribute
+It is common to set the name attribute to be the same as the id attribute. It is used during form submission to post or get the values that one is submitting. This is only used when a server side language is used, like PHP. These attributes won't be really usefull for this particular tutorial, at least not right now, but it's good to get used to them.
+
+```
+<form>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name">
+</form>
+```
+
+##### Placeholder
+You can set a placeholder for the user to know what to type inside your text boxes. This placeholder text is going to be displayed gray, as a tip to what the user should type. Use the `placeholder=""` attribute inside the input tag to set what it will be.
+
+```
+<form>
+    <label for="telephone_number">Telephone Number</label>
+    <input type="text" id="telephone_number" name="telephone_number" placeholder="(999) 999-9999">
+</form>
+```
+
+##### Form buttons
+There's another way to create buttons, and to do that, we use the input tags. We can set it to two different button values: reset and submit. Let's see the reset button first:
+
+`<input type="reset">`
+
+The reset button is going to clear all your text boxes.
+
+The submit button can be implemented in the same way, but it will not work if you have not set a value for the `action=""` attribute placed in the opening form tag. We talked about it in the beginning of this lesson.
+
+`<input type="submit">`
