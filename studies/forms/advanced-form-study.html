@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Form</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="title">Title:</label>
+
+        <br>
+
+        <input type="radio" name="title" id="mr">
+        <label for="mr">Mr.</label>
+        <br>
+        <input type="radio" name="title" id="mrs">
+        <label for="mrs">Mrs.</label>
+        <br>
+        <input type="radio" name="title" id="miss">
+        <label for="miss">Miss</label>
+        <br>
+        <input type="radio" name="title" id="phd">
+        <label for="phd">PhD</label>
+
+        <br><br>
+
+        <label for="payment">Payment Method:</label>
+
+        <select name="payment" id="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="gift_card">Gift Card</option>
+            <option value="check">Check</option>
+        </select>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="your.email@email.com">
+
+        <br><br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" min="2000-01-01" max="2001-01-01">
+
+        <br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="10" value="5">
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone">
+
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass" minlength="3" maxlength="12">
+
+        <br><br>
+
+        <label for="slider">Range:</label>
+        <input type="range" name="slider" id="slider" step="25" value="100">
+
+        <br><br>
+
+        <label for="check">Check:</label>
+        <input type="checkbox" name="check" id="check">
+
+        <br><br>
+
+        <label for="myfile">Upload a File:</label>
+        <input type="file" name="myfile" id="myfile" accept=".txt,.pdf">
+
+        <br><br>
+
+        <input type="submit">
+    </form>
+</body>
+
+</html>

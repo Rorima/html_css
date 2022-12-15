@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 1:48:30
+Where I stopped: 1:57:30
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -818,3 +818,154 @@ The reset button is going to clear all your text boxes.
 The submit button can be implemented in the same way, but it will not work if you have not set a value for the `action=""` attribute placed in the opening form tag. We talked about it in the beginning of this lesson.
 
 `<input type="submit">`
+
+#### Advanced form
+Here you're going to learn a couple more attributes and tags that you can use in your forms. Remember that both the label and the input should be inside the `<form></form>` tags
+
+##### Radio buttons: input attribute
+Radio buttons, also called option buttons, let users select one option from a collection of two or more mutually exclusive, but related, options.
+
+`<input type="radio">`
+
+In order to make it mutually exclusive, you'll have to set the name attribute to be the same in all of the radio buttons, like this:
+
+```
+<label for="title">Title:</label>
+
+<br>
+
+<input type="radio" name="title" id="mr">
+<label for="mr">Mr.</label>
+<br>
+<input type="radio" name="title" id="mrs">
+<label for="mrs">Mrs.</label>
+<br>
+<input type="radio" name="title" id="miss">
+<label for="miss">Miss</label>
+<br>
+<input type="radio" name="title" id="phd">
+<label for="phd">PhD</label>
+```
+
+In this case, all of their names is set to `"title"`. This means that we can select only one of them at a time.
+
+##### Select tag
+The select tag will display a drop down menu. You have to use the option tag to add an option to the drop down menu. Both tags are not self closing, so you have to close them. The option tag has a value attribute. You can set it the same value you would set a name attribute.
+
+```
+<label for="payment">Payment Method</label>
+
+<select name="payment" id="payment">
+    <option value="visa">Visa</option>
+    <option value="mastercard">Mastercard</option>
+    <option value="gift_card">Gift Card</option>
+    <option value="check">Check</option>
+</select>
+```
+
+##### Email: input attribute
+This attribute is almost the same as the text attribute. The main difference is that it doesn't let the user submit an email that doesn't have an @ sign.
+
+```
+<label for="email">Email</label>
+<input type="email" placeholder="your.email@email.com">
+```
+
+##### Birthday: input attribute
+This will give the user a little GUI with a drop down menu to choose their birthday.
+
+```
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday">
+```
+
+You can use a couple of attributes to limit the minimum and maximum date:
+
+```
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday" min="2000-01-01" max="2001-01-01">
+```
+
+The date format for these two attributes is yyyy/mm/dd.
+
+##### Number: input attribute
+This will display a little box where the user can only input numbers. You can also limit the minimum and maximum amount.
+
+```
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" name="quantity" min="0" max="10">
+```
+
+---
+
+Using the `value=""` attribute you can set a default quantity:
+
+```
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" name="quantity" min="0" max="10" value="5">
+```
+
+##### Telephone: input attribute
+
+```
+<label for="phone">Phone Number:</label>
+<input type="tel" name="phone" id="phone">
+```
+
+##### Password: input attribute
+This will display a password box. You can add the `minlengh=""` and `maxlengh=""` attributes.
+
+```
+<label for="pass">Password:</label>
+<input type="password" name="pass" id="pass" minlength="3" maxlength="12">
+```
+
+##### Range: input attribute
+This creates a sliding bar.
+
+```
+<label for="slider">Range:</label>
+<input type="range" name="slider" id="slider">
+```
+
+You can add steps using the `<step="">` attribute. It is preferable that you choose a value that is divisible by 100.
+
+```
+<label for="slider">Range:</label>
+<input type="range" name="slider" id="slider" step="25">
+```
+
+The number 0 is also counted as a value, so the sliding bar will have 5 different positions with this setting. This means that if you made the value 20 instead of 25, you would end up with 6 different positions instead of just 5.
+
+---
+
+You can set a default value:
+
+```
+<label for="slider">Range:</label>
+<input type="range" name="slider" id="slider" step="25" value="100">
+```
+
+##### Check boxes: input attribute
+
+```
+<label for="check">Check:</label>
+<input type="checkbox" name="check" id="check">
+```
+
+##### Upload files: input attribute
+
+```
+<label for="myfile">Upload a File:</label>
+<input type="file" name="myfile" id="myfile">
+```
+
+---
+
+To limit which file extensions will be accepted use the `accept=""` attribute. Separate each file extension with a comma.
+
+```
+<label for="myfile">Upload a File:</label>
+<input type="file" name="myfile" id="myfile" accept=".txt,.pdf">
+```
+
