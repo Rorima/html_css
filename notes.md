@@ -1053,3 +1053,23 @@ This is more or less how your HTML document should look like:
 </html>
 ```
 
+#### Colors
+In this lesson we're going to cover some basic coloring techniques using the style attribute. This attribute contains some information about how to style a whole or part of a web page. This is part of CSS. There are a lot more things you can do with the style attribute, but for now, let's just learn some basic colors. 
+
+We can apply an inline style attribute to nearly any HTML element. Here are a couple of color attributes you might want to use in your web pages:
+
+##### background-color
+You should type this in the opening body tag of your file. You can use hex values, RGB or just type the name of the color. We're going to use hex values for this lesson.
+
+`<body style="background-color:#9c86e4;">`
+
+##### color
+Because you can use this inline style attribute in a lot of elements, you can use them inside the paragraph tags as well to set the font color:
+
+`<p style="color:#dadada;">Your paragraph</p>`
+
+---
+
+You can also have other color attributes inside the same style. Just make sure to separate them with a semicolon:
+
+`<p style="color:#dadada;background-color:#2d2d2d;">Your paragraph</p>`
