@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:07:50
+Where I stopped: 2:15:30
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -971,3 +971,58 @@ To limit which file extensions will be accepted use the `accept=""` attribute. S
 <input type="file" name="myfile" id="myfile" accept=".txt,.pdf">
 ```
 
+#### Meta tags
+Meta tags are used for meta data, which is information about data. Think of it as data about data. We place meta tags within the head of our HTML document. Meta data has some use for search engines and web browsers. They let these entities and the web browser know what your web page is about and what kind of content it contains.
+
+There are other uses of meta tags too that allow us to control the viewport which is the visible area of a web page when you switch devices such as if you're viewing a page in a mobile device or a tablet, a laptop and so on.
+
+The meta tag is self closing. All the things you're going to add to it are attributes. You can have several meta tags in one file.
+
+##### Charset
+This will let the web browser know what character set we're using. There are many, such as ASCII, ASNII, UTF-8 and so on. The one you might want to set this to unicode, which is UTF-8. It has almost all characters you might want to display in your web page.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meta Tags</title>
+</head>
+<body>
+</body>
+</html>
+```
+
+##### Name
+You can use this attribute for many things in your web page. Here's a few things you can do with it.
+
+###### keywords
+You can set the name attribute equal to "keywords", and you'll be able to define some keywords about your web page for search engines like Google or Bing to identify. To set the keywords you have to use the content attribute. Inside the content attribute you can describe your web page using a few keywords.
+
+`<meta name="keywords" content="HTML,tutorial,Bro Code,YouTube">`
+
+These are keyword search terms, and depending on what you place in here, it will help in the ranking of your website.
+
+###### description
+Set the name to "description" and with the content attribute, you can add a short description about your web page. Search engines can pick up this description and learn what your web page is about.
+
+`<meta name="description" content="Bro Code HTML tutorial for beginners">`
+
+###### author
+You can also set an author for your web page.
+
+`<meta name="author" content="Me">`
+
+###### viewport
+This one will be a little complex. We're going to set the viewport for our website. The viewport is the visible area of a web page, depending on which device is being used to access the page. If the user is using a mobile phone or a tablet, you want to be sure that the dimensions will fit on the device, so that the dimensions and the scaling will adjust to accomodate that specific device.
+
+Type this in the meta tag.
+
+`<meta name="viewport" content="width=device-width,initial-scale=1.0">`
+
+These are instructions to the web browser to change the scaling and dimensions to match the divce you're using to view that page. The initial scale is set to 1, and that will set the zoom level when the page is first loaded. So if you want your page to be displayed better in mobile devices, you have to include this tag.
+
+###### http-equiv
+This attribute will make your page refresh after the set amount of seconds. You can set the amount of seconds with the content attribute. This is not really recomended unless you have a very good reason for using it, but here it is for demonstration purposes.
+
+`<meta http-equiv="refresh" content="3">`
