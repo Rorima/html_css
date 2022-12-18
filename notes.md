@@ -2,7 +2,9 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 1:57:30
+Where I stopped: 2:07:50
+
+[HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
 These are all of the notes I took while studying the HTML5 & CSS3 course made by [Bro Code](https://www.youtube.com/@BroCodez). I have to learn this first before going further on a Django course. Keep in mind that these notes are for ME. I did not make them with someone else in mind that might use this for their learning, so there will be things in here that only I will understand.
 
@@ -827,7 +829,7 @@ Radio buttons, also called option buttons, let users select one option from a co
 
 `<input type="radio">`
 
-In order to make it mutually exclusive, you'll have to set the name attribute to be the same in all of the radio buttons, like this:
+In order to make it mutually exclusive, you'll have to set the name attribute to be the same in all of the radio buttons. The id should be set to the same value as the for attribute.
 
 ```
 <label for="title">Title:</label>

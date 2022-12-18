@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+    Practice everything that you've learned.
+
+    Create a complete form and collect the user data.
+-->
+
+<html>
+
+<head>
+    <title>Practice Advanced Form</title>
+</head>
+
+<body>
+    <h1>Data Collection</h1>
+    
+    Don't worry.
+
+    <br>
+    <br>
+
+    <h3>Personal Information</h3>
+    
+    <br>
+
+    <form action="">
+        <label for="first_name">First Name:</label>
+        <input type="text" 
+               name="first_name" 
+               id="first_name">
+
+        <br><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" 
+               name="last_name" 
+               id="last_name">
+
+        <br><br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" 
+               name="birthday" 
+               id="birthday">
+
+        <br><br>
+
+        <label for="telephone_number">Telephone Number:</label>
+        <input type="tel" 
+               name="telephone_number" 
+               id="telephone_number" 
+               placeholder="(999) 999-9999">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" 
+               name="email" 
+               id="email">
+
+        <br><br>
+
+        <label for="yearly_salary">Yearly Salary:</label>
+        <input type="number" 
+               name="yearly_salary" 
+               id="yearly_salary" 
+               min="0" 
+               max="999999">
+
+        <br><br>
+
+        <label for="education">Choose your education:</label>
+        <select name="education" id="education">
+            <option value="no_education">No Education</option>
+            <option value="elementary_school">Elementary School</option>
+            <option value="middle_school">Middle School</option>
+            <option value="high_school">High School</option>
+            <option value="college">College</option>
+        </select>
+
+        <br><br>
+
+        <label for="password">Choose your password:</label>
+        <input type="password" 
+               name="password" 
+               id="password" 
+               minlength="3" 
+               maxlength="12">
+        
+        <br><br>
+
+        <label for="repeat_password">Repeat your password:</label>
+        <input type="password" 
+               name="repeat_password" 
+               id="repeat_password" 
+               minlength="3" 
+               maxlength="12">
+
+        <br><br>
+
+        <h3>Preferences</h3>
+        
+        <br>
+
+        <label for="animal_liked">Which do you like the most:</label>
+        
+        <br>
+
+        <input type="radio" 
+               name="animal_liked" 
+               id="dogs">
+        <label for="dogs">Dogs</label>
+       
+        <input type="radio" 
+               name="animal_liked" 
+               id="cats">
+        <label for="cats">Cats</label>
+
+        <br><br>
+
+        <label for="animal_liking_rate">Rate how much you like this animal:</label>
+        1<input type="range" 
+                name="animal_liking_rate" 
+                id="animal_liking_rate" 
+                step="25"
+                value="100">5
+       
+        <br><br>
+
+        <p>Choose your favorite foods:</p>
+
+        <label for="pizza_checkbox">Pizza</label>
+        <input type="checkbox" 
+               name="pizza_checkbox" 
+               id="pizza_checkbox">
+        
+        <br>
+
+        <label for="hamburger_checkbox">Hamburger</label>
+        <input type="checkbox" 
+               name="hamburger_checkbox" 
+               id="hamburger_checkbox">
+        
+        <br>
+
+        <label for="fries_checkbox">French Fries</label>
+        <input type="checkbox" 
+               name="fries_checkbox" 
+               id="fries_checkbox">
+        
+        <br>
+
+        <label for="nuggets_checkbox">Chicken Nuggets</label>
+        <input type="checkbox" 
+               name="nuggets_checkbox" 
+               id="nuggets_checkbox">
+
+        <br><br>
+
+        <label for="favorite_picture">Upload your favorite picture:</label>
+        <input type="file" 
+               name="favorite_picture" 
+               id="favorite_picture" 
+               accept=".png,.jpeg">
+
+        <br><br>
+        
+        <input type="reset">
+        <input type="submit">
+        
+    </form>
+</body>
+
+</html>
