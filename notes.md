@@ -976,10 +976,10 @@ Meta tags are used for meta data, which is information about data. Think of it a
 
 There are other uses of meta tags too that allow us to control the viewport which is the visible area of a web page when you switch devices such as if you're viewing a page in a mobile device or a tablet, a laptop and so on.
 
-The meta tag is self closing. All the things you're going to add to it are attributes. You can have several meta tags in one file.
+The meta tag is self-closing. All the things you're going to add to it are attributes. You can have several meta tags in one file.
 
 ##### Charset
-This will let the web browser know what character set we're using. There are many, such as ASCII, ASNII, UTF-8 and so on. The one you might want to set this to unicode, which is UTF-8. It has almost all characters you might want to display in your web page.
+This will let the web browser know what character set we're using. There are many, such as ASCII, ASNII, UTF-8 and so on. You'll always want to set this to unicode, which is UTF-8. It has almost all characters you might want to display in your web page. But you can search and leanr more about each charset.
 
 ```
 <!DOCTYPE html>
@@ -1014,7 +1014,7 @@ You can also set an author for your web page.
 `<meta name="author" content="Me">`
 
 ###### viewport
-This one will be a little complex. We're going to set the viewport for our website. The viewport is the visible area of a web page, depending on which device is being used to access the page. If the user is using a mobile phone or a tablet, you want to be sure that the dimensions will fit on the device, so that the dimensions and the scaling will adjust to accomodate that specific device.
+There will be a little explanation for this one. We're going to set the viewport for our website. The viewport is the visible area of a web page, depending on which device is being used to access the page. If the user is using a mobile phone or a tablet, you want to be sure that the dimensions will fit on the device, so that the dimensions and the scaling will adjust to accomodate that specific device.
 
 Type this in the meta tag.
 
@@ -1023,6 +1023,33 @@ Type this in the meta tag.
 These are instructions to the web browser to change the scaling and dimensions to match the divce you're using to view that page. The initial scale is set to 1, and that will set the zoom level when the page is first loaded. So if you want your page to be displayed better in mobile devices, you have to include this tag.
 
 ###### http-equiv
-This attribute will make your page refresh after the set amount of seconds. You can set the amount of seconds with the content attribute. This is not really recomended unless you have a very good reason for using it, but here it is for demonstration purposes.
+This attribute will make your page refresh after the set amount of seconds. You can set the amount of seconds with the content attribute. This is not really recommended unless you have a very good reason for using it, but here it is for demonstration purposes.
 
 `<meta http-equiv="refresh" content="3">`
+
+##### Example of meta tags being used:
+This is more or less how your HTML document should look like:
+
+```
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML,tutorial,Bro Code,YouTube">
+    <meta name="description" content="Bro Code HTML tutorial for beginners">
+    <meta name="author" content="Me">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
+    <title>Meta Tags</title>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <p>Hello, Hello!</p>
+</body>
+
+</html>
+```
+
