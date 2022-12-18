@@ -276,7 +276,7 @@ Remember to open and close these tags. Add the text you want to be affected betw
 |`<big></big>`|Big text|
 |`<ins></ins>`|Inserted text (underlined)|
 |`<del></del>`|Deleted text (crossed horizontally)|
-|`<mark></mark>`|Marked text (highlited)|
+|`<mark></mark>`|Marked text (highlighted)|
 
 #### Links and images
 Before we begin this lesson, you'll want to be sure to download a couple of images. Four is a good number. Place these images in the same folder your HTML file is in. 
