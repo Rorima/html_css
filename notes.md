@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:15:30
+Where I stopped: 2:26:10
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1073,3 +1073,22 @@ Because you can use this inline style attribute in a lot of elements, you can us
 You can also have other color attributes inside the same style. Just make sure to separate them with a semicolon:
 
 `<p style="color:#dadada;background-color:#2d2d2d;">Your paragraph</p>`
+
+#### Span and div tags
+The span and div tags define a section or division on a HTML page. Typically we use a pair of these tags as a container for HTML elements, so that we can style something specific with CSS or perform some sort of procedure with JavaScript with anything marked with these tags.
+
+##### span
+We can target an element or a portion of our web page that we want to style. It depends on where we place our span tags. Let's say that we want to change the color of a single sentence in a paragraph. Just add a span tag around whatever you want to target and add the attributes you want this part to have.
+
+Painting the first sentence red:
+
+```
+<p><span style="color:red;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> Tempore fuga dolorum facilis recusandae quia autem dolorem. Explicabo impedit consequatur delectus provident ipsam facilis eveniet voluptatem mollitia beatae velit, expedita autem.</p>
+```
+
+##### div 
+This tag is almost identical to the span tag, however, anything inside the div tags is considered a block level element. This means that whatever is put within these tags will become a block in your web page. So if you use it in a text, the part that is within the div tags will be separated from the paragraph by a new line. This happens because the division will take the whole width of your web page.
+
+```
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <div style="color:blue;">Nihil aliquam non qui molestiae exercitationem voluptatum ad adipisci eius temporibus tempore nobis magni quis</div>, placeat commodi, totam sunt rerum culpa quisquam.</p>
+```
