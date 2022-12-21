@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:26:10
+Where I stopped: 2:37:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -10,7 +10,7 @@ These are all of the notes I took while studying the HTML5 & CSS3 course made by
 
 Inside each folder there will be studying files, which are files that I wrote following the teacher, and practice files, which are files that I wrote after I studied, trying to apply what I've learned. Most of the time, in practice files, I just try to repeat what I learned, but without looking at the original code.
 
-#### What is HTML?
+### What is HTML?
 * HTML is an acronym for: Hypertext Markup Language.
 * It is a declarative language, not computational (Python, PHP, Javascript)
 * It is used to declare what should exist on a web page
@@ -1092,3 +1092,162 @@ This tag is almost identical to the span tag, however, anything inside the div t
 ```
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <div style="color:blue;">Nihil aliquam non qui molestiae exercitationem voluptatum ad adipisci eius temporibus tempore nobis magni quis</div>, placeat commodi, totam sunt rerum culpa quisquam.</p>
 ```
+
+### What is CSS?
+CSS is an acronym for Cascading Style Sheets. The purpose of CSS is to customize the elements and layout of a web page. We can use it to style multiple pages at once by linking separate, independed HTML files to a single style sheet.
+
+There is three ways to include CSS in a web page.
+
+* Inline
+ We have already some experience with this using the style attribute. It's useful for adding few custom elements.
+* Internal
+ We create a pair of style elements in the head of our HTML document. It is useful for a single page website.
+* External
+ We can link a CSS file to our HTML file to style one or all pages of our website. It is useful if you make a website with many pages.
+
+#### Declaring CSS properties
+There is a set of rules for declaring CSS properties. First, you'll want to identify the HTML element that you want to costumize.
+
+```
+h1{color:green;}
+```
+
+h1: element
+color: property
+value: green
+
+This won't work for inline.
+
+#### Inline customization
+We already learned this in the HTML tutorials. Type the style attribute inside the opening tags of what you want to customize and choose a value. You can add several properties, just make sure to separate each with semicolons.
+
+`<h1 style="background-color: green; color: white;">CSS Demo</h1>`
+
+This will only affect this exact pair of h1 tags. If you have more, they'll not be affected. That's because when you use inline CSS styling, it will only affect what is inside of.
+
+#### Internal customization
+With internal CSS styling, we can target all instances of a certain tag that is used. Write a pair of style tags between the head tags. This is not a self-closing tag.
+
+Now you need to list the HTML elements you want to target with CSS. Let's say that we want to target any instances of paragraph tags. Type the name of the tag without the angle brackets, then type a set of curly brackets and inside them, type all the customizations you want to make.
+
+```
+<head>
+    <style>
+        p{
+            color:red;
+            background-color: green;
+        }
+    </style>
+
+    <title>Introduction to CSS</title>
+</head>
+```
+
+##### Targeting ids
+You can target HTML elements that have a particular id that you gave to it. Type the hash symbol (#) and after it, type the name of the id.
+
+```
+<head>
+    <style>
+        p{
+            color:red;
+            background-color: green;
+        }
+
+        #paragraph4{
+            color:aqua;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <title>Introduction to CSS</title>
+</head>
+```
+
+##### Targeting classes
+There's a similar attribute to id, which is called class. It is reserved to a unique grouping for parts of your web page. Firstly, write the class attribute inside the opening tags of the elements you want to change:
+
+```
+<p class="top-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+<p class="top-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+```
+
+Then target it at the top of your file. The process is very similar to the id target, but instead of using the hash symbol, you're going to use the dot (.) and then the name of the class.
+
+```
+<head>
+    <style>
+        .top-content{
+            color: azure;
+            background-color: burlywood;
+        }
+    </style>
+
+    <title>Introduction to CSS</title>
+</head>
+```
+
+###### Targeting tags that are grouped in classes
+You can target specific tags that are grouped in your classes. This means that if you have several tags grouped in one class, you can target one specific tag to change while the others will not be affected. Instead of using just the dot, use the name of the tag plus the dot to target a specific tag.
+
+```
+h2.top-content{
+    color: aliceblue;
+    background-color: brown;
+}
+```
+
+This means that all instances of h2 tags that have the class "top-content" will be changed to those colors. Other h2 tags will not be affected, nor other tags that have the "top-content" class.
+
+##### Targeting several tags at once
+Type the tags and separate them by a comma.
+
+```
+p,h1,h2,h3{
+    color:red;
+    background-color: green;
+}
+```
+
+#### External customization
+The external method of CSS styling is extremely useful because all you would need to do is have a single CSS file, and all you would need is to include the link to the web page you want to style with the CSS properties. So if you have a website with 50 different pages, you wouldn't have to type every single customization to each page. You could just link your CSS file to the 50 pages.
+
+Create your HTML file normally, and create another file in the same folder with the ".css" extension. It can be called whatever you want. You can work on this CSS file in the same way you worked between the style tags in your HTML file. The main difference is that you don't need the style tags in here.
+
+Code inside the "style.css" file:
+
+```
+h1{
+    color: blueviolet;
+}
+```
+
+You'll notice that nothing will happen to your web if you type these things inside the CSS file. That's because we have to link this CSS file to our HTML file. Use the `<link>` tag to do that.
+
+##### Link tag
+This tag should be placed between the head tags of your HTML file. It is a self-closing tag. There are a couple of attributes you can place inside the link tag. 
+
+###### rel
+The attribute `rel=""` indicates the relationship between files. Inside the double quotes you should type "stylesheet".
+
+```
+<link rel="stylesheet">
+```
+
+###### type
+The second attribute is the `type=""`. It's not required, but it's considered good practice to include it. Its value is "text/css".
+
+```
+<link rel="stylesheet" type="text/css">
+```
+
+###### href
+This attribute stands for Hypertext Reference. We place either the file name, the file path or the URL of the CSS file that we want to link here.
+
+```
+<link rel="stylesheet" type="text/css" href="style.css">
+```
+
+As soon as you run your page again, it should be styled.
+
