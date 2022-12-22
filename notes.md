@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:37:00
+Where I stopped: 2:41:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1096,7 +1096,7 @@ This tag is almost identical to the span tag, however, anything inside the div t
 ### What is CSS?
 CSS is an acronym for Cascading Style Sheets. The purpose of CSS is to customize the elements and layout of a web page. We can use it to style multiple pages at once by linking separate, independed HTML files to a single style sheet.
 
-There is three ways to include CSS in a web page.
+There are three ways to include CSS in a web page.
 
 * Inline
  We have already some experience with this using the style attribute. It's useful for adding few custom elements.
@@ -1243,7 +1243,7 @@ The second attribute is the `type=""`. It's not required, but it's considered go
 ```
 
 ###### href
-This attribute stands for Hypertext Reference. We place either the file name, the file path or the URL of the CSS file that we want to link here.
+This attribute stands for Hypertext Reference. We place either the file name, the file path, or the URL of the CSS file that we want to link here.
 
 ```
 <link rel="stylesheet" type="text/css" href="style.css">

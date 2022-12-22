@@ -1,0 +1,11 @@
+body{
+    background-color: blueviolet;
+}
+
+#p1{
+    color: aliceblue;
+}
+
+#p2, #p3{
+    color: antiquewhite;
+}
