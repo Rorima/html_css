@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:41:00
+Where I stopped: 2:50:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1250,4 +1250,110 @@ This attribute stands for Hypertext Reference. We place either the file name, th
 ```
 
 As soon as you run your page again, it should be styled.
+
+#### Fonts
+Fonts are a set of characters of a particular style. There are two categories of fonts. There are Serif and Sans-serif. Serif is a typography term for small lines or embelishments on certain areas of individual characters. They are like little edges that stick out. Sans-serif means without serif. Do search online for images if you don't know what serifs are. Generally, Sans-serif fonts tend to be better to read on a computer screen, but you are free to choose whatever you want.
+
+##### font-family
+You can list a few different fonts that you want to use. You have to list fonts because if for some reason the browser of the user doesn't recognize the font, it will jump to the next one in the list of fonts you provided. For that reason, it is important to choose as your last fonts, the ones that are supported by all browsers, which are the ones that are known the most.
+
+One thing to keep in mind is that you have to write the name of the font without quotes, unless the name of the font has a space, then you have to type it between quotes.
+
+A couple of fonts you can use:
+
+* "Ink Free"
+* Helvetica
+* Times
+* "Times New Roman"
+* "Gil Sans"
+* Georgia
+* sans-serif (as last resource, because it works in pretty much any browser)
+
+Code example:
+
+```
+#p1{
+    font-family: "Ink Free", "MV Boli", sans-serif;
+}
+```
+
+Make sure to separate each with a comma.
+
+##### font-style
+You can set this to:
+
+* normal
+* oblique
+* italic
+
+Code example:
+
+```
+#p2{
+    font-family: sans-serif;
+    font-style: italic;
+}
+```
+
+##### font-weight
+You can set this to `normal`, `bold`, `bolder`, or a value that you want between 0 and 1000. This will add weight to your font, making it bold.
+
+Code example:
+
+```
+#p2{
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+```
+
+##### font-size
+The default value for font-size is 16px. There is another unity of measure called `em`, and the default is 1 (which is equal to 16px).
+
+Code examples:
+
+`#p2{font-size: 2em;} <!--This is the same as 32px-->`
+
+`#p2{font-size: 20px;}`
+
+##### text-decoration
+You can choose several decorations and styles for these decorations.
+
+Decorations:
+
+* line-through
+* underline
+* overline
+* normal
+
+Styles:
+
+* underline wavy;
+* underline double;
+* underline dotted;
+* underline dashed;
+* underline solid;
+* underline none;
+
+And you can choose a color for the line as well:
+
+* overline wavy red;
+
+Code example:
+
+`#p3{text-decoration: underline dotted;}`
+
+##### Getting new fonts
+You can use the Google Fonts API to get more fonts. Go to the website [fonts.google.com](fonts.google.com) and choose your font. After you choose your font, roll down the page and find a button called "Select" and after the select you will see the name of the font you choose. Then, after selecting, search for the button on the top of the page that says "View Selected Families". There you'll find two links, one for the HTML head and other for the CSS property. The link for the HTML file is written between angle brackets, and the property is just `font-family: 'font-name'`, where "font-name" is the name of the font you chose.
+
+Code example in HTML head:
+
+```
+<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+```
+
+Code example in CSS:
+
+`#p3{font-family: 'Aldrich';}`
 
