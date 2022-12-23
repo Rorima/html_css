@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 2:50:00
+Where I stopped: 3:02:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1356,4 +1356,95 @@ Code example in HTML head:
 Code example in CSS:
 
 `#p3{font-family: 'Aldrich';}`
+
+#### Borders
+There are different styles of border, and you'll want to specify what kind of border you want. Using the attribute `border-style=""`. You can find online all styles available. We are only going to cover a few.
+
+##### border-style
+Here are the values you can choose:
+
+* dashed
+* dotted
+* solid
+* double
+* groove
+* hidden
+* ridge
+* inset
+* outset
+
+```
+p{
+    border-style: solid;
+}
+```
+
+##### padding
+You can add some space between the text and the border.
+
+```
+p{
+    padding: 5px;
+    border-style: solid;
+}
+```
+
+##### border-width
+
+```
+p{
+    border-style: outset;
+    padding: 50px;
+    border-width: 30px;
+}
+```
+
+You can have a different thickness for each side of your border if you asign it four values instead of just one. The first value applies to the northern border, the second to the eastern border, the third to the southern border and the last to the western border. You cannot use commas to separate the values.
+
+```
+p{
+    border-style: outset;
+    padding: 50px;
+    border-width: 30px 15px 30px 15px;
+}
+```
+
+##### border-color
+
+```
+p{
+    border-style: outset;
+    padding: 50px;
+    border-width: 30px 15px 30px 15px;
+    border-color: blueviolet;
+}
+```
+
+##### border-radius
+This will give you rounded corners to your borders.
+
+```
+p{
+    border-style: outset;
+    padding: 50px;
+    border-width: 30px 15px 30px 15px;
+    border-color: blueviolet;
+    border-radius: 1000px;
+}
+```
+
+The value doesn't need to be so high. Experiment.
+
+##### Targeting certain parts of the border
+
+```
+h1{
+    border-bottom-style: dotted;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-left-color: blue;
+    border-right-style: solid;
+    border-right-width: 100px;
+}
+```
 
