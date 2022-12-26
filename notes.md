@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 3:02:00
+Where I stopped: 3:07:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1399,7 +1399,7 @@ p{
 }
 ```
 
-You can have a different thickness for each side of your border if you asign it four values instead of just one. The first value applies to the northern border, the second to the eastern border, the third to the southern border and the last to the western border. You cannot use commas to separate the values.
+You can have a different thickness for each side of your border if you asign it four values instead of just one. The first value applies to the northern border, the second to the eastern, the third to the southern and the last to the western border. You cannot use commas to separate the values.
 
 ```
 p{
@@ -1421,7 +1421,7 @@ p{
 ```
 
 ##### border-radius
-This will give you rounded corners to your borders.
+This will give rounded corners for your borders.
 
 ```
 p{
@@ -1433,7 +1433,7 @@ p{
 }
 ```
 
-The value doesn't need to be so high. Experiment.
+The value doesn't need to be so high. It can also be in percentage. Experiment.
 
 ##### Targeting certain parts of the border
 
@@ -1448,3 +1448,56 @@ h1{
 }
 ```
 
+#### Backgrounds
+Generally, if you want to change the background color of your page, you target the body. You can also target the whole HTML file by using the HTML tag inside the CSS file.
+
+##### linear-gradient
+A gradient is a gradual change from one color to another. In order to use this, type the name of the first color inside the parenthesis, and then the name of the second color.
+
+```
+html{
+    background: linear-gradient(grey, black)
+}
+```
+
+The gradient will only extent to where there is content in the page. If there's only a header in the page, there will be several sections of gradients that start and end. This is what you can do to make the gradient go from the beginning to the end of the page:
+
+```
+html{
+    background: linear-gradient(grey, black);
+    background-repeat: no-repeat; /* The gradient will not repeat */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Bg won't move when the page is scrolled */
+}
+```
+
+---
+
+You can have the colors flow in a different direction.
+
+`background: linear-gradient(to right, grey, black);`
+
+The gradient will flow to the right. The available positions are: top, right, left. To bottom is default.
+
+##### Image
+Below you have the syntax for how to add images if it is in the same folder as your document. You can do the same thing you did with the liner-gradient.
+
+```
+html{
+    background-image: url("image-name.png/jgp");
+}
+```
+
+##### Other tags
+You can apply this same process to other tags, like `h1` and `p`.
+
+```
+p{
+    background-image: url("bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+```

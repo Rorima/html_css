@@ -1,0 +1,25 @@
+html{
+    /*Adding a background image*/
+    background-image: url("bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    color: white;
+    font-size: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    /*Adding gradient*/
+    /*background: linear-gradient(#7052dc, #450278);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color:white*/
+}
+
+h1, p{
+    background-color: #71717166;
+}
