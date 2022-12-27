@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 3:07:00
+Where I stopped: 3:27:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1501,3 +1501,73 @@ p{
     background-attachment: fixed;
 }
 ```
+
+#### Margins
+Margins are used to create space around an element. It can be easy to mix up margins with padding because they both perform a similar task. Let's first create some content in our page and surround it with borders.
+
+```
+h1{
+    border: 1px solid;
+    width: 300px;
+}
+
+p{
+    border: 1px solid;
+    width: 250px;
+}
+```
+
+The main difference between padding and margins is that padding is the distance between an item within an element and its border. Margin is the distance between HTML elements or the edge of the browser window.
+
+```
+p{
+    border: 1px solid;
+    width: 250px;
+    margin: 25px;
+}
+```
+
+You can also use percentages instead of pixels so that the page element will adjust to the page size.
+
+##### Margin orientation
+
+```
+p{
+    border: 1px solid;
+    width: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+```
+
+###### Negative values
+
+```
+p{
+    border: 1px solid;
+    width: 400px;
+    padding: 25px;
+    margin-top: -25px;
+}
+```
+
+###### Shorthand
+This is a shorthand way of writing by stating all four values. The order is: top, right, bottom, left.
+
+```
+p{
+    margin-top: 25px 75px 25px 75px;
+}
+```
+
+###### Center the margin
+
+```
+#p4{
+    margin: auto;
+}
+```
+
+This will place your element in the center of the page no matter the size of the browser page.
