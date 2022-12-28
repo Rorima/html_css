@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 3:27:00
+Where I stopped: 3:35:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1571,3 +1571,63 @@ p{
 ```
 
 This will place your element in the center of the page no matter the size of the browser page.
+
+#### Shadows
+There are different kinds of shadow properties. They are text shadows, and box shadows. There are four values you can use inside the shadow respectively: horizontal, vertical, blur and color. In the horizontal displacement, if you give it a positive value, it will displace your item to the right, while if you give it a negative value, it will displace your item to the left. The same applies to the vertical displacement. Positive, go down; negative, go up.
+
+##### Text shadows
+Shadow do the right: `h1{text-shadow: 5px 0px;}`
+
+Shadow to the left: `h1{text-shadow: -5px 0px;}`
+
+Shadow downwards: `text-shadow: 0px 5px;`
+
+Shadow upwards: `text-shadow: 0px -5px;`
+
+Shadow diagonal: `text-shadow: 5px 5px;`
+
+###### Blur and color
+
+The magnitude of the blur effect is in pixels.
+
+`text-shadow: 10px 10px 5px;`
+
+Just type the name of the color after blur:
+
+`text-shadow: 3px 3px 5px yellow;`
+
+You can also type the name of the color without having any blur:
+
+`text-shadow: 10px 10px yellow;`
+
+If both vertical and horizontal values are 0 and you apply a color, it will seem like the text is glowing.
+
+`text-shadow: 0px 0px 3px #00ff11;`
+
+###### Two text shadows
+You can make a fire effect by adding two different shadows to your text. In order to do this, place a comma after all values and then, add the values you want for the next shadow, following the same strucutre shown in the beginning of this lesson.
+
+`text-shadow: 0px 0px 10px yellow, 0px -5px 10px red;`
+
+##### Box shadows
+This works the same as text shadows. The main difference is that box shadows change entire elements.
+
+`box-shadow: 10px 10px 5px gray;`
+
+Whole code example:
+
+```
+h1{
+    margin: auto;
+    border: 1px solid;
+    width: 155px;
+    padding: 25px;
+    background-color: black;
+    color: aliceblue;
+    border-color: red;
+    border-radius: 10px;
+
+    text-shadow: 0px 0px 10px yellow, 0px -5px 10px red;
+    box-shadow: 10px 10px 5px gray;
+}
+```

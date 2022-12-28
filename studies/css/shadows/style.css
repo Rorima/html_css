@@ -1,0 +1,17 @@
+body{
+    font-size: 20px;
+}
+
+h1{
+    margin: auto;
+    border: 1px solid;
+    width: 155px;
+    padding: 25px;
+    background-color: black;
+    color: aliceblue;
+    border-color: red;
+    border-radius: 10px;
+
+    text-shadow: 0px 0px 10px yellow, 0px -5px 10px red;
+    box-shadow: 10px 10px 5px gray;
+}
