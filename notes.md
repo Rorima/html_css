@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 3:35:00
+Where I stopped: 3:45:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1629,5 +1629,103 @@ h1{
 
     text-shadow: 0px 0px 10px yellow, 0px -5px 10px red;
     box-shadow: 10px 10px 5px gray;
+}
+```
+
+#### Pseudo-classes
+Think of a pseudo-class as a special keyword that is used to define a special state of an element. It can do things like change the appearance of a button when users hover over it, make drop-down menues appear, style certain items in a list and etc.
+
+For this lesson, we're going to create a link, a button and an unordered list. We will only change colors, but rememeber that you can change a lot of other things, like the opacity, add borders, change size, font, and etc.
+
+##### Changing links
+Type the name of the element, a colon and then the pseudoclass.
+
+Changing the color for the link that hasn't been clicked yet:
+
+```
+a:link{
+    color: #21dc00;
+}
+```
+
+When the link has been clicked:
+
+```
+a:visited{
+    color: blueviolet;
+}
+```
+
+##### Changing buttons
+
+When the user hovers the mouse over the button:
+
+```
+button:hover{
+    background-color: red;
+}
+```
+
+When the user clicks the button:
+
+```
+button:active{
+    background-color: #d20000;
+}
+```
+
+##### Changing lists
+
+Changing the first item:
+
+```
+li:first-child{
+    background-color: greenyellow;
+}
+```
+
+Changing the last item:
+
+```
+li:last-child{
+    background-color: greenyellow;
+}
+```
+
+##### nth-child
+You can change a specific item in a list:
+
+```
+li:nth-child(5){
+    background-color: greenyellow;
+}
+```
+
+Or change all odd numbers (you can change even numbers as well):
+
+```
+li:nth-child(odd){
+    background-color: greenyellow;
+}
+```
+
+You can also create a custom formula to target very specific items. You have to place this inside the parenthesis: `an+b`. You will substitute these letters with the values you want.
+
+`a`: Cycle size. How many times do you want this to repeat;
+`n`: Counter. It starts at 0;
+`b`: Offset value.
+
+Let's say that we want to target every third item within our list. So for our cycle size, we put 3. The n can be n, because it starts with 0. There will be no offset, so we will set it to 0.
+
+```
+li:nth-child(3n+0){
+    /*
+        nth-child(an+b)
+        a = cycle size
+        n = counter
+        b = offset value
+    */
+
+    background-image: linear-gradient(to right, yellow, white);
 }
 ```
