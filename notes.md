@@ -1770,7 +1770,7 @@ This value will fix the element to the screen, no matter if the user scrolls or 
 ```
 
 ###### relative
-The relative value will place the element based on its normal positioning. For example, an h1 is placed at the top and on the left side, so if you give the value "relative", it will be place relative to that position (upper corner, left side).
+The relative value will place the element based on its normal positioning. For example, an h1 is placed at the top and on the left side, so if you give the value "relative", it will be placed relative to that position (upper corner, left side).
 
 ```
 #more-or-less-center{
@@ -1795,7 +1795,7 @@ Everything that is static is what it normally is by default. So if you ever need
 `#statick-p{position: static;}`
 
 ###### absolute
-The absolute value makes the element's position relative to the outer element. So if you have two squares and the position of the inner square is set to absolute, when the outer square moves, the inner square will move along with it.
+The absolute value makes the element's position relative to its outer container. In other words, you make the inner box independent of the outer box, because you can move it outside of the outer box if you want. You can set the position of your absolute box using the top, bottom, left and right properties.
 
 Code example:
 

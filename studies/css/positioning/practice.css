@@ -1,0 +1,21 @@
+div{
+    border: 1px solid;
+}
+
+#outer{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+
+    bottom: 0px;
+    right: 0px;
+}
+
+#inner{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    margin: auto;
+}
