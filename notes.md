@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 3:45:00
+Where I stopped: 4:08:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1727,5 +1727,97 @@ li:nth-child(3n+0){
     */
 
     background-image: linear-gradient(to right, yellow, white);
+}
+```
+
+#### Positionning
+
+##### Text alignment
+We can use the text alignment property to place text to the left, to the center or to the right of our screen. By default, text is aligned to the left.
+
+```
+#p1{text-align: left;}
+
+#p2{text-align: center;}
+
+#p3{text-align: right;}
+```
+
+##### Float property
+An element that uses the float property will have all other elements or text flow around it, like in a lake. It will allow elements to be side by side. You can chose the side (left or right).
+
+```
+#float-p1{
+    float: left;
+    width: 250px;
+}
+```
+
+This means that the first paragraph will be in the left, and other paragraphs will be around it.
+
+##### Position property
+There are five different values we can place inside the position property. This property is used to position an element some place in your web page. These are the values: fixed, relative, sticky, absolute and static position.
+
+###### fixed
+This value will fix the element to the screen, no matter if the user scrolls or not. It's going to be like a water mark. In the example below, a text is being displayed at the bottom right of the screen.
+
+```
+#bottom-right{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+```
+
+###### relative
+The relative value will place the element based on its normal positioning. For example, an h1 is placed at the top and on the left side, so if you give the value "relative", it will be place relative to that position (upper corner, left side).
+
+```
+#more-or-less-center{
+    position: relative;
+    left: 200px;
+}
+```
+
+###### sticky
+An element that is sticky will stick to the viewport when you're scrolling. It is very useful for a navigation bar, for example, where you want it to always be stuck to the top, even when the user scrolls down.
+
+```
+#sticky-p{
+    position: sticky;
+    bottom: 0px;
+}
+```
+
+###### static
+Everything that is static is what it normally is by default. So if you ever need to reset the position of something, set it to static.
+
+`#statick-p{position: static;}`
+
+###### absolute
+The absolute value makes the element's position relative to the outer element. So if you have two squares and the position of the inner square is set to absolute, when the outer square moves, the inner square will move along with it.
+
+Code example:
+
+```
+#outer-div{
+    position: relative;
+    border: 1px solid;
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inner-div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+
+    top: 50px;
+    left: 50px;
 }
 ```

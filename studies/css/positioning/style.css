@@ -1,0 +1,67 @@
+h1, h2{text-align: center;}
+h1{
+    background-color: lightgray;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+#div-containers{
+    border: 1px solid;
+    padding: 5%;
+    margin: auto;
+    width: 500px;
+}
+
+
+#p1{text-align: left;}
+
+#p2{text-align: center;}
+
+#p3{text-align: right;}
+
+
+#float-p1{
+    float: left;
+    width: 250px;
+}
+
+
+#bottom-right{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+#more-or-less-center{
+    position: relative;
+    left: 200px;
+}
+
+#sticky-p{
+    position: sticky;
+    bottom: 0px;
+}
+
+#statick-p{position: static;}
+
+#outer-div{
+    position: relative;
+    border: 1px solid;
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inner-div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+
+    top: 50px;
+    left: 50px;
+}
