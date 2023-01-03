@@ -1,0 +1,20 @@
+p{
+    width: fit-content;
+    background-color: red;
+    font-size: 85px;
+    text-align: center;
+    margin: 0px;
+}
+
+
+#translate{transform: translate(200px, 50px);}
+
+#rotatex{transform: rotateX(50deg);}
+#rotatey{transform: rotateY(50deg);}
+#rotatez{transform: rotateZ(50deg);}
+
+#scale{transform: scale(2,1);}
+
+#skew{transform: skew(10deg,10deg);}
+
+#matrix{transform: matrix(0.5,1,1,0.5,1,1)}

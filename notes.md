@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 4:08:00
+Where I stopped: 4:13:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1821,3 +1821,43 @@ Code example:
     left: 50px;
 }
 ```
+
+#### Transformations
+Transform is a CSS property that can be used to apply a two-dimensional or three-dimensional transformation on a base element. We can transform elements by making them rotate, move, skew them, or increase/decrease the scaling of its dimensions.
+
+##### translate
+Moves the element. The first value is the x, the second is the y.
+
+`#p2{transform: translate(50px, 0px);}`
+
+This will mave my #p2 move 50px to the right.
+
+##### rotate
+Makes the element rotate on its axis.
+`#p2{transform: rotate(10deg);}`
+
+You can also use `rotateY(0deg)` to make it rotate on its y axis, and `rotateX(0deg)` to make it rotate on its X axis. By default it rotates on its z axis.
+
+##### scale
+Changes the size or scalling of the element.
+
+`#scale{transform: scale(2,1);}`
+
+The first value represents width, and the second represents height. One is the normal amount. If you want to squish it, give a floating point value under 1.
+
+##### skew
+Skews the element. The first value represents the width, and the second, the height.
+
+`#skew{transform: skew(10deg,10deg);}`
+
+##### matrix
+This takes six values. Here's a list with all of them:
+
+1. scalex()
+2. skewY()
+3. skewX()
+4. scaleY()
+5. translateX()
+6. translateY()
+
+If you want your element to at least appear, scaleX and scaleY have to be greater than 0.
