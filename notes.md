@@ -1839,7 +1839,7 @@ Makes the element rotate on its axis.
 You can also use `rotateY(0deg)` to make it rotate on its y axis, and `rotateX(0deg)` to make it rotate on its X axis. By default it rotates on its z axis.
 
 ##### scale
-Changes the size or scalling of the element.
+Changes the size or scaling of the element.
 
 `#scale{transform: scale(2,1);}`
 

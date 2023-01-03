@@ -6,7 +6,6 @@ p{
     margin: 0px;
 }
 
-
 #translate{transform: translate(200px, 50px);}
 
 #rotatex{transform: rotateX(50deg);}
