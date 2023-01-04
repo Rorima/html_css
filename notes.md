@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 4:13:00
+Where I stopped: 4:17:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1861,3 +1861,18 @@ This takes six values. Here's a list with all of them:
 6. translateY()
 
 If you want your element to at least appear, scaleX and scaleY have to be greater than 0.
+
+#### Navigation Bar
+Create an unordered list, and for each item, set a link to which file you want the page to go to.
+
+Here's how the HTML looks like:
+
+```
+<ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Services</a></li>
+    <li><a href="">Contact Us</a></li>
+</ul>
+```
+
