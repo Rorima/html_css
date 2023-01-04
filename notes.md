@@ -1876,3 +1876,41 @@ Here's how the HTML looks like:
 </ul>
 ```
 
+Then, on the CSS file, write this:
+
+```
+/* Modifying the undordered list */
+ul{
+    list-style-type: none; /* Remove the dots before each item */
+    padding: 0px; /* Bring the list to the left corner */
+    margin: 0px; /* This also brings the list to the left corner */
+    overflow: hidden; /* Cut the content in case it goes past the screen */
+    background-color: darkgray; /* The color of the bar */
+}
+
+/* Modifying each link element (a) inside all list items (li) */
+li a{
+    float: left; /* Bring all links to the same line */
+    display: block; /* Turn the element into a block instead of an inline element */
+    padding: 10px 15px; /* Add some space between each link, bottom and top. */
+    text-align: center; /* Align the text to the center */
+    text-decoration: none; /* Remove the underline from the link */
+    border-right: 1px solid black; /* Add a nice border to separate each word */
+    min-width: 60px; /* Increase the space between each word */
+    color: #e8e8e8; /* Change the color of the text */
+}
+
+li a:hover{
+    background-color: gray; /* Pseudo-class that changes background color of each word when someone hovers their mouse over it*/
+}
+```
+
+Doing the same bar without using unordered lists:
+
+HTML:
+
+```
+<div id="bar">
+    <a href="">Home</a><a href="">About</a><a href="">Explore</a><a href="">Login</a>
+</div>
+```

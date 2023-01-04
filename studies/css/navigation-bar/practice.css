@@ -1,0 +1,41 @@
+/* Bro's bar */
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: darkgray;
+    overflow: hidden;
+}
+
+li a{
+    float: left;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid black;
+    min-width: 60px;
+    color: #e8e8e8;
+}
+
+li a:hover{
+    background-color: gray;
+}
+
+/* My Bar */
+#bar{
+    background-color: darkgray;
+    padding: 10px 0px;
+}
+
+#bar a{
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid black;
+    color: #e8e8e8;
+}
+
+#bar a:hover{
+    background-color: gray;
+}
