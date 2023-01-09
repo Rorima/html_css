@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 4:17:00
+Where I stopped: 4:39:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -1913,4 +1913,185 @@ HTML:
 <div id="bar">
     <a href="">Home</a><a href="">About</a><a href="">Explore</a><a href="">Login</a>
 </div>
+```
+
+CSS:
+
+```
+#bar{
+    background-color: darkgray;
+    padding: 10px 0px;
+}
+
+#bar a{
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid black;
+    color: #e8e8e8;
+}
+
+#bar a:hover{
+    background-color: gray;
+}
+```
+
+#### Animations
+An animation allows us to change some property of an element over the course of time, instead of changing it instantaneously. Keep in mind that you can use whatever property you want.
+
+We need to create something called key frame rule. It is basically the animation itself. Any element that uses this will behave based on the animation steps that are listed in this rule.
+
+You have to type `@keyframes` and choose the name of your animation. Let's say we want to change the color of our element from red to blue.
+
+`@keyframes myColorAnimation{}`
+
+This is the framework for the keyframe rule.
+
+We will need some sort of starting position and some sort of ending position. You are going to use `from{}` and `to{}`. We can list properties inside them.
+
+```
+@keyframes myColorAnimation{
+    from{background-color: red;}
+    to{background-color: blue;}
+}
+```
+
+Now, you have to write the name of the animation within the element that you want to animate. I want to animate a paragraph, so I'll write `animation: myColorAnimation` inside it.
+
+Secondly, we will need a duration. You can set the duration using the `animation-duration:;` property.
+
+`animation-duration: 5s;`
+
+This means that the element will change from red to blue in a span of 5 seconds, but it will only do this once.
+
+Code so far:
+
+```
+#p1{
+    animation: myColorAnimation;
+    animation-duration: 5s;
+}
+
+@keyframes myColorAnimation{
+    from{background-color: red;}
+    to{background-color: blue;}
+}
+```
+
+##### Iteration count
+This sets how many times the animation will take place. Write it within the element you want to animate.
+
+`animation-iteration-count: 10;`
+
+If you want it to go forever, use:
+
+`animation-iteration-count: infinite;`
+
+Code example:
+
+```
+#p1{
+    animation: myColorAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myColorAnimation{
+    from{background-color: red;}
+    to{background-color: blue;}
+}
+```
+
+##### Using percentages
+We can list multiple steps for our animation. Just substitute the `from{}` and `to{}` for percentages. Let's make our object change to 6 different colors.
+
+```
+@keyframes anotherColorAnimation{
+    0%{background-color: red;}
+    20%{background-color: orange;}
+    40%{background-color: yellow;}
+    60%{background-color: green;}
+    80%{background-color: blue;}
+    100%{background-color: purple;}
+}
+```
+
+The percentage signs represent the amount of time that the animation will take to do what you've set it to do. We set it to become orange in 20%. This means that the animation will take 20% of the 5 seconds that were given to it, and it will turn the element orange within those 20% of the 5 seconds. The higher the percentage, the slower the object will reach the completion of the animation.
+
+The animation will always go back and forth. This means that if you set it to 50%, the animation will be completed in the first half of the time, and the other half will be used to make the object go back to the original state you set it in the beginning of the animation. You can test this using the properties below.
+
+##### Rotation
+Let's learn how to rotate elements. In order to do that, you are going to use the transform property.
+
+```
+#p3{
+    animation: rotateAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation{
+    100%{transform: rotateZ(360deg);}
+}
+```
+
+This means that the element will turn 360 degrees in the span of five seconds. This will occur forever, because the iteration count is set to infinite. If you choose a higher value for degrees, it will rotate faster.
+
+##### Moving objects
+
+```
+@keyframes moveObject{
+    50%{transform: translate(100px, 0);}
+}
+```
+
+##### Scaling
+
+```
+@keyframes scaleObject{
+    50%{transform: scale(2, 2);}
+}
+```
+
+##### Opacity
+With this configuration, the object will fade in and out. The value 1 represents that the object is visible, the value 0, invisible.
+
+```
+@keyframes changeOpacity{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+```
+
+##### Font size
+
+```
+@keyframes changeFontSize{
+    30%{font-size: 100px;}
+    60%{font-size: 60px;}
+}
+```
+
+##### Hover
+You can have an animation begin when you hover over it. Create a pseudo-class and place inside of it all the animation properties that would be inside the element.
+
+This:
+
+```
+#p1{
+    animation: myColorAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+```
+
+Would turn into this:
+
+```
+#p1:hover{
+    animation: myColorAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
 ```

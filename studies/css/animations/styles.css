@@ -1,0 +1,92 @@
+p{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 80px;
+    text-align: center;
+    margin: 0px;
+}
+
+#p1{
+    animation: myColorAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p2{
+    animation: anotherColorAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p3{
+    animation: rotateAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p4{
+    animation: moveObject;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p5{
+    animation: scaleObject;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p6{
+    animation: changeOpacity;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p7{
+    animation: changeFontSize;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#p8:hover{
+    animation: myColorAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myColorAnimation{
+    from{background-color: red;}
+    to{background-color: blue;}
+}
+
+@keyframes anotherColorAnimation{
+    20%{background-color: red;}
+    40%{background-color: orange;}
+    60%{background-color: yellow;}
+    80%{background-color: green;}
+    100%{background-color: blue;}
+}
+
+@keyframes rotateAnimation{
+    10%{transform: rotateZ(360deg);}
+}
+
+@keyframes moveObject{
+    50%{transform: translate(100px, 0);}
+}
+
+@keyframes scaleObject{
+    50%{transform: scale(0.3, 0.3);}
+}
+
+@keyframes changeOpacity{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes changeFontSize{
+    30%{font-size: 100px;}
+    60%{font-size: 60px;}
+}
