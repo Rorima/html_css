@@ -1,0 +1,25 @@
+div{
+    font-size: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+#p1{
+    animation: moveText;
+    animation-duration:2s;
+}
+
+#p2{
+    animation: moveText;
+    animation-duration:2.5s;
+}
+
+#p3{
+    animation: moveText;
+    animation-duration:3s;
+}
+
+@keyframes moveText{
+    0%{transform: translate(1000px, 0px)};
+    90%{transform: translate(0px, 0px)};
+}
