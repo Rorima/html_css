@@ -2114,6 +2114,7 @@ Firstly, create divs:
 The following code creates boxes on the screen, but they are not movable yet. Write this in the CSS file:
 
 ```
+/* Setting up the config for each item in the flexbox */
 .container div{
     color: white;
     height: 100px;
@@ -2129,6 +2130,7 @@ The following code creates boxes on the screen, but they are not movable yet. Wr
 Write this above the code you've just written:
 
 ```
+/* Setting up the flexbox itself */
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -2138,7 +2140,7 @@ Write this above the code you've just written:
 
 The display property defines the layout of how an element will be treated. It can be treated as an inline element, as a flex element, as a block and etc. In this case, we are using flex, which makes a flexible box.
 
-The flex-wrap property defines whether items inside the flexbox will be forced to stay in the same line or will go another line if the screen is very little. It can receive three values: `nowrap`, which states that the items cannot go to another line, `wrap`, which states that they can go to another line, and `wrap-reverse`, which states that the items will go upwards instead of downwards.
+The flex-wrap property defines whether items inside the flexbox will be forced to stay in the same line or will go to another line if the screen is gets smaller. It can receive three values: `nowrap`, which states that the items cannot go to another line, `wrap`, which states that they can go to another line, and `wrap-reverse`, which states that the items will go upwards instead of downwards.
 
 ##### Flex Direction
 You can choose how the flexblox will be displayed on the screen using the property `flex-direction:;`. The most used values are `row`, which is the default value, and `column`.
@@ -2153,7 +2155,7 @@ You can choose how the flexblox will be displayed on the screen using the proper
 }
 ```
 
-If you choose `column` as the value for the flex direction attribute, you'll notice that the box that contain the elements is a block, and it will fill the whole screen. You can mark how much of the screen this block will fill by specifying a width.
+If you choose `column` as the value for the flex direction property, you'll notice that the box that contains the elements is a block, and it will fill the whole screen. You can choose how much of the screen this block will fill by specifying a width.
 
 ```
 .container{
@@ -2167,7 +2169,7 @@ If you choose `column` as the value for the flex direction attribute, you'll not
 ```
 
 ##### Justify content
-This is normally set to left by default. This can receive three values: `flex-start`, `center` and `flex-end`. The first value brings the elements to the left; the second, to the center; and the third, to the right side.
+This is normally set to left by default. This can receive three values: `flex-start`, `center` and `flex-end`. The first value brings the elements to the left; the second, to the center; and the third, to the right hand side.
 
 ```
 .container{
@@ -2194,7 +2196,7 @@ There's also one more value. It is the `space-around`, which will make any aditi
 ```
 
 ##### Align items
-The property `align-items:;` work the same as `justify-content:;`. The main difference is that `align-items:;` will do it horizontally. It's values are the same as the `justify-content:;`'s, namely `flex-start`, `center` and `flex-end`.
+The property `align-items:;` work the same as `justify-content:;`. The main difference is that `align-items:;` will do it vertically (up and down) while `justify-content:;` does it horizontally (side to side). Its values are the same as the `justify-content:;`'s, namely `flex-start` (place it on the top), `center` (place it in the center) and `flex-end` (place it on the bottom).
 
 ##### Centering something
 For new developers it's surprisingly difficult to align something in the middle, both horizontally and vertically. But you can do this easily using a flexbox. To best demonstrate this, let's get rid of all of the items inside our flexbox, except for the first item:
