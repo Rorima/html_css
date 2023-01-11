@@ -2,7 +2,7 @@
 
 [Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
-Where I stopped: 4:39:00
+Where I stopped: 4:49:00
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -2093,5 +2093,128 @@ Would turn into this:
     animation: myColorAnimation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+```
+
+#### Flexbox
+A flexbox is a web layout model that allows for responsive elements within a container to be arranged depending on screen size and web page layout. It is a flexible container that can contain flexible items within it.
+
+Firstly, create divs:
+
+```
+<div class="container">
+    <div>#1</div>
+    <div>#2</div>
+    <div>#3</div>
+    <div>#4</div>
+    <div>#5</div>
+</div>
+```
+
+The following code creates boxes on the screen, but they are not movable yet. Write this in the CSS file:
+
+```
+.container div{
+    color: white;
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    text-align: center;
+    line-height: 100px; /* The height of the text inside the box */
+    font-size: 50px;
+    margin: 5px;
+}
+```
+
+Write this above the code you've just written:
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+```
+
+The display property defines the layout of how an element will be treated. It can be treated as an inline element, as a flex element, as a block and etc. In this case, we are using flex, which makes a flexible box.
+
+The flex-wrap property defines whether items inside the flexbox will be forced to stay in the same line or will go another line if the screen is very little. It can receive three values: `nowrap`, which states that the items cannot go to another line, `wrap`, which states that they can go to another line, and `wrap-reverse`, which states that the items will go upwards instead of downwards.
+
+##### Flex Direction
+You can choose how the flexblox will be displayed on the screen using the property `flex-direction:;`. The most used values are `row`, which is the default value, and `column`.
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+
+    flex-direction: column;
+}
+```
+
+If you choose `column` as the value for the flex direction attribute, you'll notice that the box that contain the elements is a block, and it will fill the whole screen. You can mark how much of the screen this block will fill by specifying a width.
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+
+    flex-direction: column;
+    width: 110px;
+}
+```
+
+##### Justify content
+This is normally set to left by default. This can receive three values: `flex-start`, `center` and `flex-end`. The first value brings the elements to the left; the second, to the center; and the third, to the right side.
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+
+    flex-direction: row;
+    justify-content: center;
+}
+```
+
+There's also one more value. It is the `space-around`, which will make any aditional space appear between the elements.
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+
+    flex-direction: row;
+    justify-content: space-around;
+}
+```
+
+##### Align items
+The property `align-items:;` work the same as `justify-content:;`. The main difference is that `align-items:;` will do it horizontally. It's values are the same as the `justify-content:;`'s, namely `flex-start`, `center` and `flex-end`.
+
+##### Centering something
+For new developers it's surprisingly difficult to align something in the middle, both horizontally and vertically. But you can do this easily using a flexbox. To best demonstrate this, let's get rid of all of the items inside our flexbox, except for the first item:
+
+```
+<div class="container">
+    <div>#1</div>
+</div>
+```
+
+Now, we just have to use the previous two properties, namely `justify-content` and `align-items` to place the item on the center of the screen:
+
+```
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    height: 400px;
+
+    justify-content: center;
+    align-items: center;
 }
 ```
