@@ -1,8 +1,8 @@
 # Notes
 
-[Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
+[READ THIS WHOLE FILE AFTER FINISHING THE COURSE]
 
-Where I stopped: 4:49:00
+[Course link](https://www.youtube.com/watch?v=cyuzt1Dp8X8&ab_channel=BroCode)
 
 [HTML best practices](https://www.youtube.com/watch?v=e3jhKg1ozvw&ab_channel=TheCodingWays)
 
@@ -2218,5 +2218,27 @@ Now, we just have to use the previous two properties, namely `justify-content` a
 
     justify-content: center;
     align-items: center;
+}
+```
+
+#### Icons
+We will learn how to add icons to our web page. [Here](https://fontawesome.com/search?o=r&m=free) is a website where you can use to download some icons. You can find lots of free icons there. You can either download them or link them. In order to link them, you'll need to create a kit. For this lesson, let's just download them.
+
+You can implement them in the same way you can implement images.
+
+HTML file:
+
+```
+<img src="house-solid.svg" alt="Home Icon">
+<img src="magnifying-glass-solid.svg" alt="Magnifying Glass">
+<img src="user-solid.svg" alt="User">
+```
+
+These SVG images will be really big, so you can resize them in the CSS file.
+
+```
+img{
+    width: 100px;
+    height: 100px;
 }
 ```
