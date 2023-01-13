@@ -2242,3 +2242,43 @@ img{
     height: 100px;
 }
 ```
+
+#### HTML Best Practices
+There are three reasons you should learn how to write good HTML:
+
+1. You'll pass front-end interviews with ease;
+2. You'll gain respect from your coworkers;
+3. You'll be better at your job.
+
+##### 1. Use semantic markup
+Semantic markup is the use of a markup language such as HTML to convey information about the meaning of each element in a document through proper selection of markup elements, and to maintain complete separation between the markup and the visual presentation of the elements contained in the document.
+
+You should always use HTML tags that convey the meaning of the element you're bilding. This means that if you're going to write paragraphs, use the `<p>` tag instead of `<div>`, and use the `<h>` tags for headings instead of other tags.
+
+
+##### 2. Minimize HTML
+Try to find more efficient ways to get the same result out of your HTML. The more HTML there is, the less readable the whole document will be.
+
+##### 3. Avoid inline CSS
+When you use inline CSS, you cannot separate markup from styles. It might also cause performance degradation. And finally, if you style everything inline, you won't be able to re-use common styles.
+
+##### 4. Avoid inline JavaScript
+This is considered a bad practice. It violates the principle of separation of concerns. The HTML, CSS and JavaScript files should be separated. This makes the code easier to maintain. Inline JavaScript cannot be cached. Chaches save our client resources and our website loads faster. Moreover, inline JavaScript might be blocked by CSP.
+
+##### 5. Carefully order the loading and execution of your script tags.
+When a user requests a page from the site, the page HTML starts streaming content to the browser. As soon as a browser encounters a tag for an external image, script, CSS file, etc., it will start downloading that file simultaneously. If we creatively use attributes, or put our script at the bottom of the page, your page will appear to load faster.
+
+##### 6. Compress HTML
+There are tools and programs that can compress your HTML, removing spaces, tabs and empty lines from your document. Search for gulp-minify or html minimizer webpack plugin.
+
+##### 7. Validate your HTML
+Validating a web page is process of ensuring that it conforms to the norms. It is commom to make mistakes while writting HTML. In order to prevent this, we can validate HTML code against the formal guidelines. You can check your HTML documents in [this](https://validator.w3.org/nu/) website.
+
+##### 8. Format your HTML
+Make sure to indent your code and comment whenever necessary.
+
+##### 9. Use title and meta tags
+The contents inside the title tag is very importnat for search engine optimization. It is used by search algorithms to know what the page is about. Meta tags are also used for this same purpose.
+
+##### 10. Omit optional HTML tags
+You can find specs about tags that can be omitted online.
